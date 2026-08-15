@@ -2108,6 +2108,9 @@ export const PokedexText: { [id: IDEntry]: PokedexText } = {
 	whimsicott: {
 		name: "Whimsicott",
 	},
+	whimsicottmega: {
+		name: "Whimsicott-Mega",
+	},
 	petilil: {
 		name: "Petilil",
 	},

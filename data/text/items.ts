@@ -2508,6 +2508,10 @@ export const ItemsText: { [id: IDEntry]: ItemText } = {
 		name: "Wepear Berry",
 		shortDesc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
 	},
+	whimsicottite: {
+		name: "Whimsicottite",
+		desc: "If held by a Whimsicott, this item allows it to Mega Evolve in battle.",
+	},
 	whippeddream: {
 		name: "Whipped Dream",
 		shortDesc: "Evolves Swirlix into Slurpuff when traded.",

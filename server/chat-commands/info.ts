@@ -2212,7 +2212,7 @@ export const commands: Chat.ChatCommands = {
 		} else if (['7', 'gen7', 'seven', 'sm', 'sumo', 'usm', 'usum'].includes(generation)) {
 			generation = 'sm';
 			genNumber = 7;
-		} else if (['6', 'gen6', 'oras', 'six', 'xy'].includes(generation)) {
+		} else if (['6', 'gen6', 'oras', 'six', 'xy', 'ucc', 'uranium'].includes(generation)) {
 			generation = 'xy';
 			genNumber = 6;
 		} else if (['5', 'b2w2', 'bw', 'bw2', 'five', 'gen5'].includes(generation)) {

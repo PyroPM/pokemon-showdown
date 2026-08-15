@@ -300,6 +300,27 @@ export const DefaultText: { [id: IDEntry]: DefaultText } = {
 		end: "  The snow stopped.",
 		upkeep: "  (The snow is falling down.)",
 	},
+	thunderstorm: {
+		weatherName: "Thunderstorm",
+		start: "  A thunderstorm started!",
+		end: "  The thunderstorm subsided.",
+		upkeep: "  (The thunderstorm is raging.)",
+		damage: "  [POKEMON] is hit by lightning!",
+	},
+	fallout: {
+		weatherName: "Toxic Fallout",
+		start: "  A Toxic Fallout has set in!",
+		end: "  The air is clean again.",
+		upkeep: "  (The toxic fallout continues.)",
+		damage: "  [POKEMON] is affected by the radiation!",
+	},
+	chernobyl: {
+		weatherName: "Chernobyl",
+		start: "  A Toxic Fallout has set in!",
+		end: "  The air is clean again.",
+		upkeep: "  (The geiger counter is FEROCIOUSLY ticking.)", // "  (The toxic fallout continues.)",
+		damage: "  [POKEMON] is affected by the radiation!",
+	},
 	desolateland: {
 		weatherName: "Intense Sun",
 		start: "  The sunlight turned extremely harsh!",
@@ -342,6 +363,11 @@ export const DefaultText: { [id: IDEntry]: DefaultText } = {
 		start: "  The battlefield got weird!",
 		end: "  The weirdness disappeared from the battlefield!",
 		block: "  [POKEMON] is protected by the Psychic Terrain!",
+	},
+	stickyterrain: {
+		start: "  The battlefield became sticky!",
+		end: "  The stickiness disappeared from the battlefield!",
+		block: "  [POKEMON] is protected by the Sticky Terrain!",
 	},
 
 	// field effects

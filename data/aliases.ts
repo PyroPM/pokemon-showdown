@@ -99,6 +99,12 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	pmotm: "[Gen 9] Mix and Mega: Limited Supply Random Battle",
 	mnmls: "[Gen 9] Mix and Mega: Limited Supply Random Battle",
 	ccapm: "[Gen 9] CCAPM2025 Random Battle",
+	// ucc metas
+	omega: "[Gen 6] Omega (Ubers)",
+	gamma: "[Gen 6] Gamma (OU)",
+	beta: "[Gen 6] Beta (UU)",
+	alpha: "[Gen 6] Alpha (RU)",
+	ulc: "[Gen 6] Uranium Little Cup (LC)",
 
 	// mega evos --- 1st ordered alphabetically by species, 2nd by alias
 	megasnow: "Abomasnow-Mega",
@@ -146,6 +152,7 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	megabro: "Slowbro-Mega",
 	tatsugirimega: "Tatsugiri-Curly-Mega",
 	megasaur: "Venusaur-Mega",
+	megawhim: "Whimsicott-Mega",
 	megazygardecomplete: "Zygarde-Mega",
 	zygardecompletemega: "Zygarde-Mega",
 
