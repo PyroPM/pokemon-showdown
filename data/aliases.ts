@@ -166,7 +166,7 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	transport: "Pokestar Transport",
 	pokestarufof: "Pokestar UFO",
 	pokestarufoflying: "Pokestar UFO",
-	ufo: "Pokestar UFO",
+	// ufo: "Pokestar UFO",
 	ufof: "Pokestar UFO",
 	ufoflying: "Pokestar UFO",
 	ufo2: "Pokestar UFO-2",
@@ -779,6 +779,7 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	vivillontundra: "Vivillon",
 
 	// abilities --- 1st ordered alphabetically by ability name, 2nd by alias
+	accel: "Acceleration",
 	adapt: "Adaptability",
 	asoneg: "As One (Glastrier)",
 	asones: "As One (Spectrier)",
@@ -2582,6 +2583,16 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	venomiconp: "Venomicon",
 	venomiconprologue: "Venomicon",
 	volk: "Volkraken",
+
+	cubbl: "Cubblfly",
+	ufo: "S51-A",
+
+	march: "Archilles-Mega",
+	marchilles: "Archilles-Mega",
+	melectruxo: "Electruxo-Mega",
+	mlynx: "Metalynx-Mega",
+	mmeta: "Metalynx-Mega",
+	minfla: "Inflagetah-Mega",
 };
 
 /** This is what lets you type "tb"/"tbolt"/"bolt" to find "thunderbolt" in the

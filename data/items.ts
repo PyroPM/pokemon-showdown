@@ -279,6 +279,33 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 205,
 		gen: 3,
 	},
+	arbokite: {
+		name: "Arbokite",
+		spritenum: 580,
+		megaStone: {
+			"Arbok": "Arbok-Mega",
+			"Arbok-Nuclear": "Arbok-Nuclear-Mega",
+		},
+		itemUser: ["Arbok", "Arbok-Nuclear"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: -3,
+		gen: 6,
+		isNonstandard: "Past",
+	},
+	archillesite: {
+		name: "Archillesite",
+		spritenum: 580,
+		megaStone: { "Archilles": "Archilles-Mega" },
+		itemUser: ["Archilles"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: -4,
+		gen: 6,
+		isNonstandard: "Past",
+	},
 	armorfossil: {
 		name: "Armor Fossil",
 		spritenum: 12,
@@ -287,6 +314,16 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 104,
 		gen: 4,
+		isNonstandard: "Past",
+	},
+	aromaticherb: {
+		name: "Aromatic Herb",
+		spritenum: 295,
+		fling: {
+			basePower: 80,
+		},
+		num: -5,
+		gen: 6,
 		isNonstandard: "Past",
 	},
 	aspearberry: {
@@ -351,6 +388,21 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 2344,
 		gen: 9,
+	},
+	baariettite: {
+		name: "Baariettite",
+		spritenum: 580,
+		megaStone: {
+			"Baariette": "Baariette-Mega",
+			"Baariette-Nuclear": "Baariette-Nuclear-Mega",
+		},
+		itemUser: ["Baariette", "Baariette-Nuclear"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: -6,
+		gen: 6,
+		isNonstandard: "Past",
 	},
 	babiriberry: {
 		name: "Babiri Berry",
@@ -738,6 +790,16 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 			return !item.megaStone?.[source.baseSpecies.baseSpecies];
 		},
 		num: 767,
+		gen: 6,
+		isNonstandard: "Past",
+	},
+	carrotwine: {
+		name: "Carrot Wine",
+		spritenum: 746,
+		fling: {
+			basePower: 30,
+		},
+		num: -21,
 		gen: 6,
 		isNonstandard: "Past",
 	},
@@ -1130,6 +1192,16 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 192,
 		gen: 4,
 	},
+	coconutmilk: {
+		name: "Coconut Milk",
+		spritenum: 746,
+		fling: {
+			basePower: 30,
+		},
+		num: -21,
+		gen: 6,
+		isNonstandard: "Past",
+	},
 	colburberry: {
 		name: "Colbur Berry",
 		spritenum: 78,
@@ -1266,6 +1338,21 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 285,
 		gen: 4,
+	},
+	darkdramasamaite: {
+		name: "Dark Dramasamaite",
+		spritenum: 580,
+		megaStone: {
+			"Dramasama": "Dramasama-Mega-Dark",
+			"Dramasama-Nuclear": "Dramasama-Nuclear-Mega-Dark",
+		},
+		itemUser: ["Dramasama", "Dramasama-Nuclear"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: -7,
+		gen: 6,
+		isNonstandard: "Past",
 	},
 	darkgem: {
 		name: "Dark Gem",
@@ -1557,6 +1644,21 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 235,
 		gen: 2,
 	},
+	dramasamaite: {
+		name: "Dramasamaite",
+		spritenum: 580,
+		megaStone: {
+			"Dramasama": "Dramasama-Mega",
+			"Dramasama-Nuclear": "Dramasama-Nuclear-Mega",
+		},
+		itemUser: ["Dramasama", "Dramasama-Nuclear"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: -8,
+		gen: 6,
+		isNonstandard: "Past",
+	},
 	drampanite: {
 		name: "Drampanite",
 		spritenum: 569,
@@ -1595,6 +1697,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 576,
 		gen: 5,
 		isPokeball: true,
+	},
+	drilgannite: {
+		name: "Drilgannite",
+		spritenum: 580,
+		megaStone: { "Drilgann": "Drilgann-Mega" },
+		itemUser: ["Drilgann"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: -9,
+		gen: 6,
+		isNonstandard: "Past",
 	},
 	dubiousdisc: {
 		name: "Dubious Disc",
@@ -1825,6 +1939,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		forcedForme: "Arceus-Electric",
 		num: 779,
 		gen: 7,
+		isNonstandard: "Past",
+	},
+	electruxolite: {
+		name: "Electruxolite",
+		spritenum: 580,
+		megaStone: { "Electruxo": "Electruxo-Mega" },
+		itemUser: ["Electruxo"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: -10,
+		gen: 6,
 		isNonstandard: "Past",
 	},
 	emboarite: {
@@ -2734,8 +2860,11 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 	gyaradosite: {
 		name: "Gyaradosite",
 		spritenum: 589,
-		megaStone: { "Gyarados": "Gyarados-Mega" },
-		itemUser: ["Gyarados"],
+		megaStone: {
+			"Gyarados": "Gyarados-Mega",
+			"Gyarados-Nuclear": "Gyarados-Nuclear-Mega",
+		},
+		itemUser: ["Gyarados", "Gyarados-Nuclear"],
 		onTakeItem(item, source) {
 			return !item.megaStone?.[source.baseSpecies.baseSpecies];
 		},
@@ -2766,6 +2895,31 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		onEat() { },
 		num: 197,
 		gen: 4,
+	},
+	hafliberry: {
+		name: "Hafli Berry",
+		spritenum: 603,
+		isBerry: true,
+		naturalGift: {
+			basePower: 80,
+			type: "Nuclear",
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.type === 'Nuclear' && target.getMoveHitData(move).typeMod > 0) {
+				const hitSub = target.volatiles['substitute'] && !move.flags['bypasssub'] && !(move.infiltrates && this.gen >= 6);
+				if (hitSub) return;
+
+				if (target.eatItem()) {
+					this.debug('-50% reduction');
+					this.add('-enditem', target, this.effect, '[weaken]');
+					return this.chainModify(0.5);
+				}
+			}
+		},
+		onEat() { },
+		num: -20,
+		gen: 6,
+		isNonstandard: "Past",
 	},
 	hardstone: {
 		name: "Hard Stone",
@@ -3012,6 +3166,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 282,
 		gen: 4,
 	},
+	inflagetite: {
+		name: "Inflagetite",
+		spritenum: 580,
+		megaStone: { "Inflagetah": "Inflagetah-Mega" },
+		itemUser: ["Inflagetah"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: -11,
+		gen: 6,
+		isNonstandard: "Past",
+	},
 	inciniumz: {
 		name: "Incinium Z",
 		spritenum: 651,
@@ -3109,6 +3275,21 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 710,
 		gen: 6,
 		isNonstandard: "Past",
+	},
+	junglecrown: {
+		name: "Jungle Crown",
+		spritenum: 694,
+		fling: {
+			basePower: 30,
+		},
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move && move.type === 'Fighting') {
+				return this.chainModify([4915, 4096]);
+			}
+		},
+		num: -12,
+		gen: 6,
 	},
 	kangaskhanite: {
 		name: "Kangaskhanite",
@@ -3224,6 +3405,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 221,
 		gen: 2,
+	},
+	kiricornite: {
+		name: "Kiricornite",
+		spritenum: 580,
+		megaStone: { "Kiricorn": "Kiricorn-Mega" },
+		itemUser: ["Kiricorn"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: -11,
+		gen: 6,
+		isNonstandard: "Past",
 	},
 	kommoniumz: {
 		name: "Kommonium Z",
@@ -3986,6 +4179,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		gen: 2,
 		isNonstandard: "Past",
 	},
+	metalynxite: {
+		name: "Metalynxite",
+		spritenum: 580,
+		megaStone: { "Metalynx": "Metalynx-Mega" },
+		itemUser: ["Metalynx"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: -13,
+		gen: 6,
+		isNonstandard: "Past",
+	},
 	metronome: {
 		name: "Metronome",
 		spritenum: 289,
@@ -4232,6 +4437,21 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 81,
 		gen: 1,
 	},
+	mossshard: {
+		name: "Moss Shard",
+		spritenum: 300,
+		fling: {
+			basePower: 30,
+		},
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move.type === 'Grass') {
+				return this.chainModify([4915, 4096]);
+			}
+		},
+		num: -14,
+		gen: 6,
+	},
 	muscleband: {
 		name: "Muscle Band",
 		spritenum: 297,
@@ -4338,6 +4558,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		zMoveType: "Normal",
 		num: 776,
 		gen: 7,
+		isNonstandard: "Past",
+	},
+	oblivicornite: {
+		name: "Oblivicornite",
+		spritenum: 580,
+		megaStone: { "Oblivicorn": "Oblivicorn-Mega" },
+		itemUser: ["Oblivicorn"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: -15,
+		gen: 6,
 		isNonstandard: "Past",
 	},
 	occaberry: {
@@ -5396,6 +5628,13 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 212,
 		gen: 4,
 	},
+	royaljelly: {
+		name: "Royal Jelly",
+		spritenum: 403,
+		num: -16,
+		gen: 6,
+		isNonstandard: "Past",
+	},
 	rustedshield: {
 		name: "Rusted Shield",
 		spritenum: 699,
@@ -6193,6 +6432,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		},
 		num: 1116,
 		gen: 8,
+	},
+	syrentideite: {
+		name: "Syrentideite",
+		spritenum: 580,
+		megaStone: { "Syrentide": "Syrentide-Mega" },
+		itemUser: ["Syrentide"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: -17,
+		gen: 6,
+		isNonstandard: "Past",
 	},
 	syrupyapple: {
 		name: "Syrupy Apple",
@@ -7415,6 +7666,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		gen: 7,
 		isNonstandard: "Past",
 	},
+	unidentifiedfallenobject: {
+		name: "Unidentified Fallen Object",
+		spritenum: 580,
+		megaStone: { "S51-A": "S51-A-Mega" },
+		itemUser: ["S51-A"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: -18,
+		gen: 6,
+		isNonstandard: "Past",
+	},
 	unremarkableteacup: {
 		name: "Unremarkable Teacup",
 		spritenum: 756,
@@ -7639,6 +7902,18 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		onEat: false,
 		num: 167,
 		gen: 3,
+		isNonstandard: "Past",
+	},
+	whimsicottite: {
+		name: "Whimsicottite",
+		spritenum: 580,
+		megaStone: { "Whimsicott": "Whimsicott-Mega" },
+		itemUser: ["Whimsicott"],
+		onTakeItem(item, source) {
+			return !item.megaStone?.[source.baseSpecies.baseSpecies];
+		},
+		num: -19,
+		gen: 6,
 		isNonstandard: "Past",
 	},
 	whippeddream: {

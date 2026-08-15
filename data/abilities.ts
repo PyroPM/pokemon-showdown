@@ -40,6 +40,17 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 0.1,
 		num: 0,
 	},
+	acceleration: {
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.priority > 0) {
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Acceleration",
+		rating: 4,
+		num: -4,
+	},
 	adaptability: {
 		onModifySTAB(stab, source, target, move) {
 			if (move.forceSTAB || source.hasType(move.type)) {
@@ -294,6 +305,27 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3.5,
 		num: 267,
 	},
+	atomizate: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && (!noModifyType.includes(move.id) || this.activeMove?.isMax) &&
+				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Nuclear';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		flags: {},
+		name: "Atomizate",
+		rating: 4,
+		num: -5,
+	},
 	aurabreak: {
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'Aura Break');
@@ -467,6 +499,16 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 2,
 		num: 66,
 	},
+	bloodlust: {
+		onAfterMoveSecondarySelf(source, target, move) {
+			if (move.totalDamage) {
+				this.heal(move.totalDamage / 8, source);
+			}
+		},
+		name: "Blood Lust",
+		rating: 3,
+		num: -6,
+	},
 	bulletproof: {
 		onTryHit(pokemon, target, move) {
 			if (move.flags['bullet']) {
@@ -487,6 +529,30 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Cheek Pouch",
 		rating: 2,
 		num: 167,
+	},
+	chernobyl: {
+		onStart(source) {
+			this.field.setWeather('chernobyl');
+		},
+		onAnySetWeather(target, source, weather) {
+			const strongWeathers = ['desolateland', 'primordialsea', 'deltastream', 'chernobyl'];
+			if (this.field.getWeather().id === 'chernobyl' && !strongWeathers.includes(weather.id)) return false;
+		},
+		onEnd(pokemon) {
+			if (this.field.weatherState.source !== pokemon) return;
+			for (const target of this.getAllActive()) {
+				if (target === pokemon) continue;
+				if (target.hasAbility('chernobyl')) {
+					this.field.weatherState.source = target;
+					return;
+				}
+			}
+			this.field.clearWeather();
+		},
+		flags: {},
+		name: "Chernobyl",
+		rating: 5,
+		num: -7,
 	},
 	chillingneigh: {
 		onSourceAfterFaint(length, target, source, effect) {
@@ -800,7 +866,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	},
 	damp: {
 		onAnyTryMove(target, source, effect) {
-			if (['explosion', 'mindblown', 'mistyexplosion', 'selfdestruct'].includes(effect.id)) {
+			if (['explosion', 'mindblown', 'mistyexplosion', 'selfdestruct', 'fissionburst'].includes(effect.id)) {
 				this.attrLastMove('[still]');
 				this.add('cant', this.effectState.target, 'ability: Damp', effect, `[of] ${target}`);
 				return false;
@@ -870,6 +936,18 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 2.5,
 		num: 219,
 	},
+	deepfreeze: {
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, target, source)) {
+				if (this.randomChance(3, 10)) {
+					target.trySetStatus('frz', source);
+				}
+			}
+		},
+		name: "Deep Freeze",
+		rating: 4,
+		num: -8,
+	},
 	defeatist: {
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, pokemon) {
@@ -914,7 +992,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			this.field.setWeather('deltastream');
 		},
 		onAnySetWeather(target, source, weather) {
-			const strongWeathers = ['desolateland', 'primordialsea', 'deltastream'];
+			const strongWeathers = ['desolateland', 'primordialsea', 'deltastream', 'chernobyl'];
 			if (this.field.getWeather().id === 'deltastream' && !strongWeathers.includes(weather.id)) return false;
 		},
 		onEnd(pokemon) {
@@ -938,7 +1016,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			this.field.setWeather('desolateland');
 		},
 		onAnySetWeather(target, source, weather) {
-			const strongWeathers = ['desolateland', 'primordialsea', 'deltastream'];
+			const strongWeathers = ['desolateland', 'primordialsea', 'deltastream', 'chernobyl'];
 			if (this.field.getWeather().id === 'desolateland' && !strongWeathers.includes(weather.id)) return false;
 		},
 		onEnd(pokemon) {
@@ -956,6 +1034,18 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Desolate Land",
 		rating: 4.5,
 		num: 190,
+	},
+	disenchant: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fairy' && move.category !== 'Status') {
+				this.add('-immune', target, '[from] ability: Disenchant');
+				return null;
+			}
+		},
+		flags: { breakable: 1 },
+		name: "Disenchant",
+		rating: 3,
+		num: -9,
 	},
 	disguise: {
 		onDamagePriority: 1,
@@ -1185,6 +1275,17 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3,
 		num: 280,
 	},
+	elementalist: {
+		onModifySTAB(stab, source, target, move) {
+			if (['Fire', 'Water', 'Electric'].includes(move.type)) {
+				return 1.5;
+			}
+		},
+		flags: {},
+		name: "Elementalist",
+		rating: 4,
+		num: -10,
+	},
 	embodyaspectcornerstone: {
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.name === 'Ogerpon-Cornerstone-Tera' && pokemon.terastallized &&
@@ -1252,6 +1353,27 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Emergency Exit",
 		rating: 1,
 		num: 194,
+	},
+	energizate: {
+		onModifyTypePriority: -1,
+		onModifyType(move, pokemon) {
+			const noModifyType = [
+				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
+			];
+			if (move.type === 'Normal' && (!noModifyType.includes(move.id) || this.activeMove?.isMax) &&
+				!(move.isZ && move.category !== 'Status') && !(move.name === 'Tera Blast' && pokemon.terastallized)) {
+				move.type = 'Electric';
+				move.typeChangerBoosted = this.effect;
+			}
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([4915, 4096]);
+		},
+		flags: {},
+		name: "Energizate",
+		rating: 4,
+		num: -11,
 	},
 	fairyaura: {
 		onStart(pokemon) {
@@ -1605,6 +1727,19 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 4,
 		num: 206,
 	},
+	geigersense: {
+		onStart(pokemon) {
+			for (const target of this.getAllActive()) {
+				if (target !== pokemon && target.hasType('Nuclear')) {
+					this.boost({atk: 1, spa: 1});
+					break;
+				}
+			}
+		},
+		name: "Geiger Sense",
+		rating: 1,
+		num: -12,
+	},
 	gluttony: {
 		onStart(pokemon) {
 			pokemon.abilityState.gluttony = true;
@@ -1724,6 +1859,10 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onTryBoost(boost, target, source, effect) {
 			if (effect.name === 'Intimidate' && boost.atk) {
 				delete boost.atk;
+				this.boost({ atk: 1 }, target, target, null, false, true);
+			}
+			if (effect.name === 'Petrify' && boost.spe) {
+				delete boost.spe;
 				this.boost({ atk: 1 }, target, target, null, false, true);
 			}
 		},
@@ -2127,6 +2266,16 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 2.5,
 		num: 151,
 	},
+	infuriate: {
+		onDamagingHit(damage, target, source, move) {
+			if (move.category === 'Physical') {
+				this.boost({atk: 1});
+			}
+		},
+		name: "Infuriate",
+		rating: 3.5,
+		num: -13,
+	},
 	innardsout: {
 		onDamagingHitOrder: 1,
 		onDamagingHit(damage, target, source, move) {
@@ -2148,6 +2297,10 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			if (effect.name === 'Intimidate' && boost.atk) {
 				delete boost.atk;
 				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Inner Focus', `[of] ${target}`);
+			}
+			if (effect.name === 'Petrify' && boost.spe) {
+				delete boost.atk;
+				this.add('-fail', target, 'unboost', 'Speed', '[from] ability: Inner Focus', `[of] ${target}`);
 			}
 		},
 		flags: { breakable: 1 },
@@ -2278,6 +2431,32 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: -1,
 		num: 103,
 	},
+	lazy: {
+		onStart(pokemon) {
+			if (!pokemon.status && pokemon.setStatus('slp', pokemon)) {
+				pokemon.statusState.time = 2;
+				pokemon.statusState.startTime = 2;
+			}
+		},
+		name: "Lazy",
+		rating: -1,
+		num: -14,
+	},
+	leadskin: {
+		onImmunity(type, pokemon) {
+			if (type === 'fallout' || type === 'chernobyl') return false;
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Nuclear' && move.category !== 'Status') {
+				this.add('-immune', target, '[from] ability: Lead Skin');
+				return null;
+			}
+		},
+		flags: { breakable: 1 },
+		name: "Lead Skin",
+		rating: 1,
+		num: -16,
+	},
 	leafguard: {
 		onSetStatus(status, target, source, effect) {
 			if (['sunnyday', 'desolateland'].includes(target.effectiveWeather())) {
@@ -2331,6 +2510,9 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 135,
 	},
 	lightningrod: {
+		onImmunity(type, pokemon) {
+			if (type === 'thunderstorm') return false;
+		},
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Electric') {
 				if (!this.boost({ spa: 1 })) {
@@ -2588,6 +2770,9 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			case 'psychicterrain':
 				types = ['Psychic'];
 				break;
+			case 'stickyterrain':
+				types = ['Poison'];
+				break;
 			default:
 				types = pokemon.baseSpecies.types;
 			}
@@ -2723,6 +2908,9 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 141,
 	},
 	motordrive: {
+		onImmunity(type, pokemon) {
+			if (type === 'thunderstorm') return false;
+		},
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Electric') {
 				if (!this.boost({ spe: 1 })) {
@@ -2898,7 +3086,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onSwitchIn(pokemon) {
 			this.add('-ability', pokemon, 'Neutralizing Gas');
 			pokemon.abilityState.ending = false;
-			const strongWeathers = ['desolateland', 'primordialsea', 'deltastream'];
+			const strongWeathers = ['desolateland', 'primordialsea', 'deltastream', 'chernobyl'];
 			for (const target of this.getAllActive()) {
 				if (target.hasItem('Ability Shield')) {
 					this.add('-block', target, 'item: Ability Shield');
@@ -3022,6 +3210,10 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				delete boost.atk;
 				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Oblivious', `[of] ${target}`);
 			}
+			if (effect.name === 'Petrify' && boost.spe) {
+				delete boost.atk;
+				this.add('-fail', target, 'unboost', 'Speed', '[from] ability: Oblivious', `[of] ${target}`);
+			}
 		},
 		flags: { breakable: 1 },
 		name: "Oblivious",
@@ -3097,7 +3289,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	},
 	overcoat: {
 		onImmunity(type, pokemon) {
-			if (type === 'sandstorm' || type === 'hail' || type === 'powder') return false;
+			if (type === 'sandstorm' || type === 'hail' || type === 'powder' || type === 'fallout') return false;
 		},
 		onTryHitPriority: 1,
 		onTryHit(target, source, move) {
@@ -3150,6 +3342,10 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			if (effect.name === 'Intimidate' && boost.atk) {
 				delete boost.atk;
 				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Own Tempo', `[of] ${target}`);
+			}
+			if (effect.name === 'Petrify' && boost.spe) {
+				delete boost.atk;
+				this.add('-fail', target, 'unboost', 'Speed', '[from] ability: Own Tempo', `[of] ${target}`);
 			}
 		},
 		flags: { breakable: 1 },
@@ -3225,6 +3421,26 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Perish Body",
 		rating: 1,
 		num: 253,
+	},
+	petrify: {
+		onStart(pokemon) {
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!activated) {
+					this.add('-ability', pokemon, 'Petrify', 'boost');
+					activated = true;
+				}
+				if (target.volatiles['substitute']) {
+					this.add('-immune', target);
+				} else {
+					this.boost({ spe: -1 }, target, pokemon, null, true);
+				}
+			}
+		},
+		flags: {},
+		name: "Petrify",
+		rating: 3.5,
+		num: -17,
 	},
 	pickpocket: {
 		onAfterMoveSecondary(target, source, move) {
@@ -3442,7 +3658,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			this.field.setWeather('primordialsea');
 		},
 		onAnySetWeather(target, source, weather) {
-			const strongWeathers = ['desolateland', 'primordialsea', 'deltastream'];
+			const strongWeathers = ['desolateland', 'primordialsea', 'deltastream', 'chernobyl'];
 			if (this.field.getWeather().id === 'primordialsea' && !strongWeathers.includes(weather.id)) return false;
 		},
 		onEnd(pokemon) {
@@ -3722,6 +3938,14 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 2.5,
 		num: 214,
 	},
+	quickcharge: {
+		onModifyPriority(priority, pokemon) {
+			if (pokemon.activeMoveActions === 0) return priority + 4;
+		},
+		name: "Quick Charge",
+		rating: 4.5,
+		num: -18,
+	},
 	quickdraw: {
 		onFractionalPriorityPriority: -1,
 		onFractionalPriority(priority, pokemon, target, move) {
@@ -3773,6 +3997,29 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Rattled",
 		rating: 1,
 		num: 155,
+	},
+	rebuild: {
+		onStart(pokemon) {
+			pokemon.addVolatile('rebuild');
+		},
+		condition: {
+			onHit(pokemon, source, move) {
+				if (move.category !== 'Status') {
+					pokemon.volatiles['rebuild'].lostFocus = true;
+				}
+			},
+		},
+		onResidualOrder: 5,
+		onResidualSubOrder: 5,
+		onResidual(pokemon) {
+			if (pokemon.volatiles['rebuild'] && !pokemon.volatiles['rebuild'].lostFocus) {
+				this.heal(pokemon.baseMaxhp / 8);
+			}
+			pokemon.volatiles['rebuild'].lostFocus = false;
+		},
+		name: "Rebuild",
+		rating: 3,
+		num: -19,
 	},
 	receiver: {
 		onAllyFaint(target) {
@@ -4080,6 +4327,10 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				delete boost.atk;
 				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Scrappy', `[of] ${target}`);
 			}
+			if (effect.name === 'Petrify' && boost.spe) {
+				delete boost.atk;
+				this.add('-fail', target, 'unboost', 'Speed', '[from] ability: Scrappy', `[of] ${target}`);
+			}
 		},
 		flags: {},
 		name: "Scrappy",
@@ -4160,6 +4411,19 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Shadow Tag",
 		rating: 5,
 		num: 23,
+	},
+	sharpcoral: {
+		onBasePowerPriority: 5,
+		onBasePower(basePower) {
+			return this.chainModify(2);
+		},
+		onSourceModifyDamage(damage) {
+			return this.chainModify(2);
+		},
+		flags: { breakable: 1 },
+		name: "Sharp Coral",
+		rating: 1,
+		num: -20,
 	},
 	sharpness: {
 		onBasePowerPriority: 19,
@@ -4423,6 +4687,18 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3.5,
 		num: 220,
 	},
+	soundboost: {
+		onBasePowerPriority: 30,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['sound']) {
+				this.debug('Sound Boost boost');
+				return this.chainModify(1.3);
+			}
+		},
+		name: "Sound Boost",
+		rating: 3,
+		num: -21,
+	},
 	soundproof: {
 		onTryHit(target, source, move) {
 			if (target !== source && move.flags['sound']) {
@@ -4622,6 +4898,14 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		name: "Sticky Hold",
 		rating: 1.5,
 		num: 60,
+	},
+	stormbringer: {
+		onStart(source) {
+			this.field.setWeather('thunderstorm');
+		},
+		name: "Stormbringer",
+		rating: 4,
+		num: -22,
 	},
 	stormdrain: {
 		onTryHit(target, source, move) {
@@ -5328,6 +5612,9 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: 72,
 	},
 	voltabsorb: {
+		onImmunity(type, pokemon) {
+			if (type === 'thunderstorm') return false;
+		},
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Electric') {
 				if (!this.heal(target.baseMaxhp / 4)) {

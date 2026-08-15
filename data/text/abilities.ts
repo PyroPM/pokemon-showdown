@@ -3,6 +3,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "No Ability",
 		shortDesc: "Does nothing.",
 	},
+	acceleration: {
+		name: "Acceleration",
+		desc: "The power of this Pokemon's priority moves is multiplied by 1.5.",
+		shortDesc: "This Pokemon's priority moves have 1.5x power.",
+	},
 	adaptability: {
 		name: "Adaptability",
 		desc: "This Pokemon's moves that match one of its types have a same-type attack bonus (STAB) of 2 instead of 1.5.",
@@ -895,7 +900,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	lightningrod: {
 		name: "Lightning Rod",
-		desc: "This Pokemon is immune to Electric-type moves and raises its Special Attack by 1 stage when hit by an Electric-type move. If this Pokemon is not the target of a single-target Electric-type move used by another Pokemon, this Pokemon redirects that move to itself if it is within the range of that move. If multiple Pokemon could redirect with this Ability, it goes to the one with the highest Speed, or in the case of a tie to the one that has had this Ability active longer.",
+		desc: "This Pokemon is immune to Electric-type moves and Thunderstorm damage and raises its Special Attack by 1 stage when hit by an Electric-type move. If this Pokemon is not the target of a single-target Electric-type move used by another Pokemon, this Pokemon redirects that move to itself if it is within the range of that move. If multiple Pokemon could redirect with this Ability, it goes to the one with the highest Speed, or in the case of a tie to the one that has had this Ability active longer.",
 		shortDesc: "This Pokemon draws Electric moves to itself to raise Sp. Atk by 1; Electric immunity.",
 		gen4: {
 			desc: "If this Pokemon is not the target of a single-target Electric-type move used by another Pokemon, this Pokemon redirects that move to itself.",
@@ -1073,7 +1078,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	motordrive: {
 		name: "Motor Drive",
-		desc: "This Pokemon is immune to Electric-type moves and raises its Speed by 1 stage when hit by an Electric-type move.",
+		desc: "This Pokemon is immune to Electric-type moves and Thunderstorm damage and raises its Speed by 1 stage when hit by an Electric-type move.",
 		shortDesc: "This Pokemon's Speed is raised 1 stage if hit by an Electric move; Electric immunity.",
 	},
 	moxie: {
@@ -1191,6 +1196,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		gen8: {
 			desc: "This Pokemon is immune to powder moves, damage from Sandstorm or Hail, and the effects of Rage Powder and the Effect Spore Ability.",
 			shortDesc: "This Pokemon is immune to powder moves, Sandstorm or Hail damage, Effect Spore.",
+		},
+		gen6: {
+			desc: "This Pokemon is immune to damage from Sandstorm, Hail or Fallout.",
+			shortDesc: "This Pokemon is immune to damage from Sandstorm, Hail or Fallout.",
 		},
 		gen5: {
 			desc: "This Pokemon is immune to damage from Sandstorm or Hail.",
@@ -2189,7 +2198,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	voltabsorb: {
 		name: "Volt Absorb",
-		desc: "This Pokemon is immune to Electric-type moves and restores 1/4 of its maximum HP, rounded down, when hit by an Electric-type move.",
+		desc: "This Pokemon is immune to Electric-type moves and Thunderstorm damage and restores 1/4 of its maximum HP, rounded down, when hit by an Electric-type move.",
 		shortDesc: "This Pokemon heals 1/4 of its max HP when hit by Electric moves; Electric immunity.",
 		gen3: {
 			desc: "This Pokemon is immune to damaging Electric-type moves and restores 1/4 of its maximum HP, rounded down, when hit by one.",

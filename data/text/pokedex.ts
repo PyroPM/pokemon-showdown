@@ -107,8 +107,14 @@ export const PokedexText: { [id: IDEntry]: PokedexText } = {
 	ekans: {
 		name: "Ekans",
 	},
+	ekansnuclear: {
+		name: "Ekans-Nuclear",
+	},
 	arbok: {
 		name: "Arbok",
+	},
+	arboknuclear: {
+		name: "Arbok-Nuclear",
 	},
 	pikachu: {
 		name: "Pikachu",

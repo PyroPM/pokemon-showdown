@@ -726,6 +726,118 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 			this.add('-weather', 'none');
 		},
 	},
+	thunderstorm: {
+		name: 'Thuderstorm',
+		effectType: 'Weather',
+		duration: 5,
+		durationCallback(source, effect) {
+			return 5;
+		},
+		onWeatherModifyDamage(damage, attacker, defender, move) {
+			if (defender.effectiveWeather() !== 'thunderstorm') return;
+			if (move.type === 'Electric') {
+				this.debug('Thunderstorm electric boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				if (this.gen <= 5) this.effectState.duration = 0;
+				this.add('-weather', 'Thunderstorm', '[from] ability: ' + effect.name, `[of] ${source}`);
+			} else {
+				this.add('-weather', 'Thunderstorm');
+			}
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Thunderstorm', (this.effectState.duration != undefined && this.effectState.duration % 2) ? '[noupkeepdamage]' : '[upkeep]');
+			if (this.field.isWeather('thunderstorm')) this.eachEvent('Weather');
+		},
+		onWeather(target) {
+			if (this.effectState.duration != undefined && !(this.effectState.duration % 2)) {
+				const typeMod = target.runEffectiveness(this.dex.getActiveMove('Thundershock'));
+				this.damage(target.baseMaxhp * Math.pow(2, typeMod) / 8);
+			}
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	fallout: {
+		name: 'Nuclear Fallout',
+		effectType: 'Weather',
+		duration: 5,
+		durationCallback(source, effect) {
+			return 5;
+		},
+		onEffectivenessPriority: -1,
+		onEffectiveness(typeMod, target, type, move) {
+			if (move && move.effectType === 'Move' && move.category !== 'Status' && target?.hasType('Nuclear')) {
+				this.add('-fieldactivate', 'Nuclear Fallout');
+				return typeMod / 2;
+			}
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				if (this.gen <= 5) this.effectState.duration = 0;
+				this.add('-weather', 'Nuclear Fallout', '[from] ability: ' + effect.name, `[of] ${source}`);
+			} else {
+				this.add('-weather', 'Nuclear Fallout');
+			}
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Nuclear Fallout', (this.effectState.duration != undefined && this.effectState.duration % 2) ? '[noupkeepdamage]' : '[upkeep]');
+			if (this.field.isWeather('fallout')) this.eachEvent('Weather');
+		},
+		onWeather(target) {
+			if (this.effectState.duration != undefined && !(this.effectState.duration % 2)) {
+				if (target.hasType('Steel') || target.hasType('Nuclear') || target.ability == 'magicguard') return;
+
+				const typeMod = target.runEffectiveness(this.dex.getActiveMove('Radioacid'));
+				this.damage(target.baseMaxhp * Math.pow(2, typeMod) / 8);
+			}
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	chernobyl: {
+		name: 'Chernobyl',
+		effectType: 'Weather',
+		duration: 0,
+		onEffectivenessPriority: -1,
+		onEffectiveness(typeMod, target, type, move) {
+			if (move && move.effectType === 'Move' && move.category !== 'Status' && target?.hasType('Nuclear')) {
+				this.add('-fieldactivate', 'Chernobyl');
+				return typeMod / 2;
+			}
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				if (this.gen <= 5) this.effectState.duration = 0;
+				this.add('-weather', 'Chernobyl', '[from] ability: ' + effect.name, `[of] ${source}`);
+			} else {
+				this.add('-weather', 'Chernobyl');
+			}
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Chernobyl', (this.effectState.duration != undefined && this.effectState.duration % 2) ? '[noupkeepdamage]' : '[upkeep]');
+			if (this.field.isWeather('chernobyl')) this.eachEvent('Weather');
+		},
+		onWeather(target) {
+			if (this.effectState.duration != undefined && !(this.effectState.duration % 2)) {
+				if (target.hasType('Steel') || target.hasType('Nuclear') || target.ability == 'magicguard') return;
+
+				const typeMod = target.runEffectiveness(this.dex.getActiveMove('Radioacid'));
+				this.damage(target.baseMaxhp * Math.pow(2, typeMod) / 8);
+			}
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
 	deltastream: {
 		name: 'DeltaStream',
 		effectType: 'Weather',

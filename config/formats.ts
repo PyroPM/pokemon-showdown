@@ -19,6 +19,45 @@ The column value will be ignored for repeat sections.
 
 export const Formats: import('../sim/dex-formats').FormatList = [
 
+	{
+		section: 'UCC Singles',
+	},
+	{
+		name: "[Gen 6] Uranium Random Battle",
+		mod: 'gen6uranium',
+		team: 'random',
+		ruleset: ['Obtainable', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
+	},
+	{
+		name: '[Gen 6] Gamma (OU)',
+		mod: 'gen6uranium',
+		ruleset: ['Standard', 'Nuclear Clause Mod', 'Soft Baton Pass Clause Mod', 'Tandor Pokedex'],
+		banlist: ['Uber', 'Shadow Tag', 'Belly Drum'],
+	},
+	{
+		name: '[Gen 6] Omega (Ubers)',
+		mod: 'gen6uranium',
+		ruleset: ['Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause', 'Tandor Pokedex'],
+	},
+	{
+		name: '[Gen 6] Beta (UU)',
+		mod: 'gen6uranium',
+		ruleset: ['[Gen 6] Gamma (OU)'],
+		banlist: ['Gamma', 'Arena Trap'],
+	},
+	{
+		name: '[Gen 6] Alpha (RU)',
+		mod: 'gen6uranium',
+		ruleset: ['[Gen 6] Beta (OU)'],
+		banlist: ['Beta'],
+	},
+	{
+		name: '[Gen 6] Uranium LC',
+		mod: 'gen6uranium',
+		ruleset: ['Little Cup', 'Standard', 'Nuclear Clause Mod', 'Soft Baton Pass Clause Mod', 'Tandor Pokedex'],
+		banlist: ['Dragon Rage', 'Sonic Boom', 'Belly Drum', 'Gligar', 'Misdreavus', 'Dunsparce'],
+	},
+
 	// S/V Singles
 	///////////////////////////////////////////////////////////////////
 

@@ -14,6 +14,20 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			}
 		},
 	},
+	atomizate: {
+		inherit: true,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([5325, 4096]);
+		},
+		rating: 5,
+	},
+	energizate: {
+		inherit: true,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.typeChangerBoosted === this.effect) return this.chainModify([5325, 4096]);
+		},
+		rating: 4,
+	},
 	galewings: {
 		inherit: true,
 		onModifyPriority(priority, pokemon, target, move) {

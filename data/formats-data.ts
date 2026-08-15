@@ -160,10 +160,16 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	ekans: {
 		tier: "LC",
 	},
+	ekansnuclear: {
+		tier: "LC",
+	},
 	arbok: {
 		tier: "ZU",
 		doublesTier: "(DUU)",
 		natDexTier: "RU",
+	},
+	arboknuclear: {
+		tier: "UU",
 	},
 	pichu: {
 		tier: "LC",
