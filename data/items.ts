@@ -1339,21 +1339,21 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 285,
 		gen: 4,
 	},
-	/*darkdramasamaite: {
-		name: "Dark Dramasamaite",
+	darkdramsamaite: {
+		name: "Dark Dramsamaite",
 		spritenum: 580,
 		megaStone: {
-			"Dramasama": "Dramasama-Mega-Dark",
-			"Dramasama-Nuclear": "Dramasama-Nuclear-Mega-Dark",
+			"Dramsama": "Dramsama-Mega-Dark",
+			"Dramsama-Nuclear": "Dramsama-Nuclear-Mega-Dark",
 		},
-		itemUser: ["Dramasama", "Dramasama-Nuclear"],
+		itemUser: ["Dramsama", "Dramsama-Nuclear"],
 		onTakeItem(item, source) {
 			return !item.megaStone?.[source.baseSpecies.baseSpecies];
 		},
 		num: -7,
 		gen: 6,
 		isNonstandard: "Past",
-	},*/
+	},
 	darkgem: {
 		name: "Dark Gem",
 		spritenum: 89,
@@ -1644,7 +1644,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 235,
 		gen: 2,
 	},
-	dramasamaite: {
+	dramsamaite: {
 		name: "Dramsamaite",
 		spritenum: 580,
 		megaStone: {
