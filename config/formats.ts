@@ -656,7 +656,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 6] Draft",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		searchShow: false,
 		ruleset: ['Standard Draft'],
 		banlist: ['Moody', 'Soul Dew', 'Swagger'],
@@ -694,7 +694,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 6] Random Battle (B12P6, No Team Preview)",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		team: 'random',
 		bestOfDefault: true,
 		ruleset: ['[Gen 6] Random Battle', 'Max Team Size = 12', 'Picked Team Size = 6'],
@@ -1172,7 +1172,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 6] Pure Hackmons",
 		desc: `Anything that can be hacked in-game and is usable in local battles is allowed.`,
-		mod: 'gen6',
+		mod: 'gen6oras',
 		ruleset: ['-Nonexistent', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause', 'EV limit = 510'],
 	},
 
@@ -4357,7 +4357,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 6] Random Battle",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		team: 'random',
 		bestOfDefault: true,
 		ruleset: ['Obtainable', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod', 'Illusion Level Mod'],
@@ -4365,7 +4365,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 6] Battle Factory",
 		desc: `Randomized teams of Pok&eacute;mon for a generated Smogon tier with sets that are competitively viable.`,
-		mod: 'gen6',
+		mod: 'gen6oras',
 		team: 'randomFactory',
 		searchShow: false,
 		challengeShow: false,
@@ -4461,7 +4461,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 6] OU",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		ruleset: ['Standard', 'Evasion Abilities Clause'],
 		banlist: ['Uber', 'Arena Trap', 'Shadow Tag', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Soul Dew', 'Baton Pass', 'Swagger'],
 	},
@@ -4519,7 +4519,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 6] Doubles OU",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		gameType: 'doubles',
 		ruleset: ['Standard Doubles'],
 		banlist: ['DUber', 'Soul Dew', 'Dark Void', 'Swagger'],
@@ -5036,7 +5036,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 6] 1v1",
 		desc: `Bring three Pok&eacute;mon to Team Preview and choose one to battle.`,
-		mod: 'gengen6oras6',
+		mod: 'gen6oras',
 		searchShow: false,
 		ruleset: [
 			'Max Team Size = 3', 'Picked Team Size = 1', 'Obtainable', 'Nickname Clause', 'OHKO Clause',
