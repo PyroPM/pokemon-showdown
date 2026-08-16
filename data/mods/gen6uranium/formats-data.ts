@@ -84,22 +84,22 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "Illegal",
 	},
 	ekans: {
-		tier: "Illegal",
+		tier: "LC",
 	},
 	ekansnuclear: {
-		tier: "Illegal",
+		tier: "LC",
 	},
 	arbok: {
-		tier: "Illegal",
+		tier: "RU",
 	},
 	arboknuclear: {
-		tier: "Illegal",
+		tier: "RU",
 	},
 	arbokmega: {
-		tier: "Illegal",
+		tier: "UU",
 	},
 	arboknuclearmega: {
-		tier: "Illegal",
+		tier: "UU",
 	},
 	pichu: {
 		tier: "Illegal",
@@ -228,10 +228,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "Illegal",
 	},
 	mankey: {
-		tier: "Illegal",
+		tier: "LC",
 	},
 	primeape: {
-		tier: "Illegal",
+		tier: "RU",
 	},
 	growlithe: {
 		tier: "Illegal",
@@ -525,13 +525,13 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "Illegal",
 	},
 	magikarp: {
-		tier: "Illegal",
+		tier: "LC",
 	},
 	gyarados: {
-		tier: "Illegal",
+		tier: "UU",
 	},
 	gyaradosmega: {
-		tier: "Illegal",
+		tier: "OU",
 	},
 	lapras: {
 		tier: "Illegal",
@@ -543,19 +543,19 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "Illegal",
 	},
 	vaporeon: {
-		tier: "Illegal",
+		tier: "OU",
 	},
 	jolteon: {
-		tier: "Illegal",
+		tier: "UU",
 	},
 	flareon: {
-		tier: "Illegal",
+		tier: "RU",
 	},
 	espeon: {
-		tier: "Illegal",
+		tier: "RU",
 	},
 	umbreon: {
-		tier: "Illegal",
+		tier: "RU",
 	},
 	leafeon: {
 		tier: "Illegal",
@@ -699,16 +699,16 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "Illegal",
 	},
 	mareep: {
-		tier: "Illegal",
+		tier: "LC",
 	},
 	flaaffy: {
-		tier: "Illegal",
+		tier: "NFE",
 	},
 	ampharos: {
-		tier: "Illegal",
+		tier: "RU",
 	},
 	ampharosmega: {
-		tier: "Illegal",
+		tier: "RU",
 	},
 	azurill: {
 		tier: "Illegal",
@@ -765,10 +765,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "Illegal",
 	},
 	misdreavus: {
-		tier: "Illegal",
+		tier: "LC",
 	},
 	mismagius: {
-		tier: "Illegal",
+		tier: "RU",
 	},
 	unown: {
 		tier: "Illegal",
@@ -789,13 +789,13 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "Illegal",
 	},
 	dunsparce: {
-		tier: "Illegal",
+		tier: "RU",
 	},
 	gligar: {
-		tier: "Illegal",
+		tier: "RU",
 	},
 	gliscor: {
-		tier: "Illegal",
+		tier: "OU",
 	},
 	snubbull: {
 		tier: "Illegal",
@@ -981,13 +981,13 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "Illegal",
 	},
 	lotad: {
-		tier: "Illegal",
+		tier: "LC",
 	},
 	lombre: {
-		tier: "Illegal",
+		tier: "NFE",
 	},
 	ludicolo: {
-		tier: "Illegal",
+		tier: "RU",
 	},
 	seedot: {
 		tier: "Illegal",
@@ -1086,7 +1086,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "Illegal",
 	},
 	sableye: {
-		tier: "Illegal",
+		tier: "RU",
 	},
 	sableyemega: {
 		tier: "Illegal",
@@ -1513,10 +1513,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "Illegal",
 	},
 	buizel: {
-		tier: "Illegal",
+		tier: "LC",
 	},
 	floatzel: {
-		tier: "Illegal",
+		tier: "RU",
 	},
 	cherubi: {
 		tier: "Illegal",
@@ -1890,10 +1890,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "Illegal",
 	},
 	whimsicott: {
-		tier: "Illegal",
+		tier: "RU",
 	},
 	whimsicottmega: {
-		tier: "Illegal",
+		tier: "UU",
 	},
 	petilil: {
 		tier: "Illegal",

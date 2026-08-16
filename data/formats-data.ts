@@ -6220,7 +6220,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	archilles: {
 		tier: "UU",
 	},
-	archillesmega: { // i think it will be funny
+	archillesmega: {
 		tier: "OU",
 	},
 	eletux: {
