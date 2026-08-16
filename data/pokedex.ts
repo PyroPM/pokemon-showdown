@@ -562,6 +562,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	arbokmega: {
 		num: 24,
 		name: "Arbok-Mega",
+		baseSpecies: "Arbok",
 		forme: "Mega",
 		types: ["Poison", "Dark"],
 		baseStats: { hp: 60, atk: 130, def: 100, spa: 65, spd: 95, spe: 90 },
@@ -575,6 +576,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	arboknuclearmega: {
 		num: 24,
 		name: "Arbok-Nuclear-Mega",
+		baseSpecies: "Arbok-Nuclear",
 		forme: "Mega",
 		types: ["Poison", "Nuclear"],
 		baseStats: { hp: 60, atk: 130, def: 100, spa: 65, spd: 95, spe: 90 },
@@ -3062,7 +3064,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	gyaradosnuclearmega: {
 		num: 130,
 		name: "Gyarados-Nuclear-Mega",
-		baseSpecies: "Gyarados",
+		baseSpecies: "Gyarados-Nuclear",
 		forme: "Mega",
 		types: ["Water", "Nuclear"],
 		baseStats: { hp: 95, atk: 155, def: 109, spa: 70, spd: 130, spe: 81 },
@@ -22545,7 +22547,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		evoItem: "Fire Stone",
 		eggGroups: ["Monster", "Field"],
 		otherFormes: ["Inflagetah-Mega"],
-		formeOrder: ["Inflagetah", "Inflagetah"],
+		formeOrder: ["Inflagetah", "Inflagetah-Mega"],
 	},
 	inflagetahmega: {
 		num: -2079,
@@ -23033,7 +23035,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	dramsamanuclearmega: {
 		num: -2109,
 		name: "Dramsama-Mega",
-		baseSpecies: "Dramsama",
+		baseSpecies: "Dramsama-Nuclear",
 		forme: "Mega",
 		types: ["Psychic", "Nuclear"],
 		baseStats: {hp: 85, atk: 35, def: 80, spa: 145, spd: 65, spe: 120},
@@ -23061,7 +23063,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 	dramsamanuclearmegadark: {
 		num: -2109,
 		name: "Dramsama-Mega-Dark",
-		baseSpecies: "Dramsama",
+		baseSpecies: "Dramsama-Nuclear",
 		forme: "Mega",
 		types: ["Dark", "Nuclear"],
 		baseStats: {hp: 85, atk: 25, def: 70, spa: 155, spd: 55, spe: 155},
