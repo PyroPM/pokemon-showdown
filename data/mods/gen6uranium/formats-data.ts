@@ -2269,6 +2269,9 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UU",
 		doublesTier: "DOU",
 	},
+	whimsicottmega: {
+		tier: "UU",
+	},
 	petilil: {
 		tier: "LC",
 	},

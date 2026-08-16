@@ -171,6 +171,12 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	arboknuclear: {
 		tier: "UU",
 	},
+	arbokmega: {
+		tier: "UU",
+	},
+	arboknuclearmega: {
+		tier: "UU",
+	},
 	pichu: {
 		tier: "LC",
 	},
@@ -3214,6 +3220,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		doublesTier: "DOU",
 		natDexTier: "RU",
 	},
+	whimsicottmega: {
+		tier: "UU",
+	},
 	petilil: {
 		tier: "LC",
 	},
@@ -6187,6 +6196,10 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	obliteryx: {
 		isNonstandard: "CAP",
 		tier: "CAP",
+	},
+	orchnyx: {
+		isNonstandard: "Past",
+		tier: "LC",
 	},
 	pokestarsmeargle: {
 		isNonstandard: "Custom",
