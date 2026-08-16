@@ -6605,7 +6605,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	syrentidemega: {
 		tier: "Uber",
 	},
-	miasmedic: { // wtf is this mon supposed to do
+	miasmedic: {
 		tier: "RU",
 	},
 	jackdeary: {
@@ -6641,8 +6641,20 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	dramsama: {
 		tier: "RU",
 	},
+	dramsamanuclear: {
+		tier: "RU",
+	},
 	dramsamamega: {
 		tier: "UU",
+	},
+	dramsamanuclearmega: {
+		tier: "UU",
+	},
+	dramsamamegadark: {
+		tier: "OU",
+	},
+	dramsamanuclearmegadark: {
+		tier: "OU",
 	},
 	antarki: {
 		tier: "OU",
