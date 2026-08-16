@@ -1339,7 +1339,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: 285,
 		gen: 4,
 	},
-	darkdramasamaite: {
+	/*darkdramasamaite: {
 		name: "Dark Dramasamaite",
 		spritenum: 580,
 		megaStone: {
@@ -1353,7 +1353,7 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		num: -7,
 		gen: 6,
 		isNonstandard: "Past",
-	},
+	},*/
 	darkgem: {
 		name: "Dark Gem",
 		spritenum: 89,
