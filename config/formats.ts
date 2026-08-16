@@ -4976,42 +4976,42 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 6] Ubers",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		searchShow: false,
 		ruleset: ['Standard', 'Mega Rayquaza Clause'],
 		banlist: ['Baton Pass', 'Swagger'],
 	},
 	{
 		name: "[Gen 6] UU",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		searchShow: false,
 		ruleset: ['Standard'],
 		banlist: ['Uber', 'OU', 'UUBL', 'Arena Trap', 'Drizzle', 'Drought', 'Shadow Tag', 'Soul Dew', 'Baton Pass', 'Swagger'],
 	},
 	{
 		name: "[Gen 6] RU",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		searchShow: false,
 		ruleset: ['[Gen 6] UU'],
 		banlist: ['UU', 'RUBL'],
 	},
 	{
 		name: "[Gen 6] NU",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		searchShow: false,
 		ruleset: ['[Gen 6] RU'],
 		banlist: ['RU', 'NUBL'],
 	},
 	{
 		name: "[Gen 6] PU",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		searchShow: false,
 		ruleset: ['[Gen 6] NU'],
 		banlist: ['NU', 'PUBL', 'Chatter'],
 	},
 	{
 		name: "[Gen 6] LC",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		searchShow: false,
 		ruleset: ['Standard', 'Little Cup', 'Pomeg Glitch Clause'],
 		banlist: [
@@ -5022,7 +5022,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 6] Monotype",
 		desc: `All the Pok&eacute;mon on a team must share a type.`,
-		mod: 'gen6',
+		mod: 'gen6oras',
 		searchShow: false,
 		ruleset: ['Standard', 'Evasion Abilities Clause', 'Same Type Clause'],
 		banlist: [
@@ -5036,7 +5036,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 6] 1v1",
 		desc: `Bring three Pok&eacute;mon to Team Preview and choose one to battle.`,
-		mod: 'gen6',
+		mod: 'gengen6oras6',
 		searchShow: false,
 		ruleset: [
 			'Max Team Size = 3', 'Picked Team Size = 1', 'Obtainable', 'Nickname Clause', 'OHKO Clause',
@@ -5052,13 +5052,13 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 6] Anything Goes",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		searchShow: false,
 		ruleset: ['Standard AG'],
 	},
 	{
 		name: "[Gen 6] ZU",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		searchShow: false,
 		ruleset: ['[Gen 6] PU'],
 		banlist: ['PU', 'ZUBL', 'Light Clay'],
@@ -5066,14 +5066,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 6] CAP",
 		desc: "The Create-A-Pok&eacute;mon project is a community dedicated to exploring and understanding the competitive Pok&eacute;mon metagame by designing, creating, and playtesting new Pok&eacute;mon concepts.",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		searchShow: false,
 		ruleset: ['[Gen 6] OU', '+CAP'],
 		banlist: ['Cawmodore'],
 	},
 	{
 		name: "[Gen 6] Battle Spot Singles",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		searchShow: false,
 		bestOfDefault: true,
 		ruleset: ['Flat Rules', 'Min Source Gen = 6'],
@@ -5081,7 +5081,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 6] Custom Game",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		searchShow: false,
 		debug: true,
 		battle: { trunc: Math.trunc },
@@ -5098,7 +5098,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 6] VGC 2016",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		gameType: 'doubles',
 		searchShow: false,
 		bestOfDefault: true,
@@ -5108,7 +5108,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 6] VGC 2015",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		gameType: 'doubles',
 		searchShow: false,
 		bestOfDefault: true,
@@ -5125,7 +5125,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 6] Battle Spot Doubles",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		gameType: 'doubles',
 		searchShow: false,
 		bestOfDefault: true,
@@ -5134,7 +5134,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 6] Doubles Custom Game",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		gameType: 'doubles',
 		searchShow: false,
 		battle: { trunc: Math.trunc },
@@ -5144,14 +5144,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 6] Battle Spot Triples",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		gameType: 'triples',
 		searchShow: false,
 		ruleset: ['Flat Rules', 'Min Source Gen = 6'],
 	},
 	{
 		name: "[Gen 6] Triples Custom Game",
-		mod: 'gen6',
+		mod: 'gen6oras',
 		gameType: 'triples',
 		searchShow: false,
 		battle: { trunc: Math.trunc },
