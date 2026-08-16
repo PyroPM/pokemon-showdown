@@ -6775,6 +6775,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	oblivicorn: {
 		tier: "UU",
 	},
+	oblivicornmega: {
+		tier: "UU",
+	},
 	luxi: {
 		tier: "LC",
 	},
