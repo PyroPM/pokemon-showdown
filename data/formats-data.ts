@@ -1052,10 +1052,18 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		doublesTier: "(DUU)",
 		natDexTier: "UUBL",
 	},
+	gyaradosnuclear: {
+		isNonstandard: "Past",
+		tier: "UU",
+	},
 	gyaradosmega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
 		natDexTier: "UUBL",
+	},
+	gyaradosnuclearmega: {
+		isNonstandard: "Past",
+		tier: "UU",
 	},
 	lapras: {
 		tier: "ZU",
