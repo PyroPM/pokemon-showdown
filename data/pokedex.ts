@@ -21414,6 +21414,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "White",
 		evos: ["Eshouten"],
 		eggGroups: ["Flying", "Field"],
+		otherFormes: ["Owten-Nuclear"],
+		formeOrder: ["Owten", "Owten-Nuclear"],
 	},
 	owtennuclear: {
 		num: -2030,
@@ -21440,6 +21442,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		prevo: "Owten",
 		evoLevel: 20,
 		eggGroups: ["Flying", "Field"],
+		otherFormes: ["Eshouten-Nuclear"],
+		formeOrder: ["Eshouten", "Eshouten-Nuclear"],
 	},
 	eshoutennuclear: {
 		num: -2031,
@@ -21519,6 +21523,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Brown",
 		evos: ["Tanscure"],
 		eggGroups: ["Field"],
+		otherFormes: ["Tancoon-Nuclear"],
+		formeOrder: ["Tancoon", "Tancoon-Nuclear"],
 	},
 	tancoonnuclear: {
 		num: -2036,
@@ -21545,6 +21551,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		prevo: "Tancoon",
 		evoLevel: 18,
 		eggGroups: ["Field"],
+		otherFormes: ["Tanscure-Nuclear"],
+		formeOrder: ["Tanscure", "Tanscure-Nuclear"],
 	},
 	tanscurenuclear: {
 		num: -2037,
@@ -21612,6 +21620,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Red",
 		evos: ["Palij-Nuclear"],
 		eggGroups: ["Undiscovered"],
+		otherFormes: ["Pahar-Nuclear"],
+		formeOrder: ["Pahar", "Pahar-Nuclear"],
 	},
 	palij: {
 		num: -2041,
@@ -21626,6 +21636,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		evoLevel: 19,
 		evos: ["Pajay"],
 		eggGroups: ["Flying"],
+		otherFormes: ["Palij-Nuclear"],
+		formeOrder: ["Palij", "Palij-Nuclear"],
 	},
 	palijnuclear: {
 		num: -2041,
@@ -21654,6 +21666,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		prevo: "Palij",
 		evoLevel: 36,
 		eggGroups: ["Flying"],
+		otherFormes: ["Pajay-Nuclear"],
+		formeOrder: ["Pajay", "Pajay-Nuclear"],
 	},
 	pajaynuclear: {
 		num: -2042,
@@ -21679,6 +21693,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		weightkg: 2.9,
 		color: "Yellow",
 		eggGroups: ["Field", "Fairy"],
+		otherFormes: ["Jerbolta-Nuclear"],
+		formeOrder: ["Jerbolta", "Jerbolta-Nuclear"],
 	},
 	jerboltanuclear: {
 		num: -2043,
@@ -21746,6 +21762,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Black",
 		evos: ["Baaschaf"],
 		eggGroups: ["Monster", "Field"],
+		otherFormes: ["Baashaun-Nuclear"],
+		formeOrder: ["Baashaun", "Baashaun-Nuclear"],
 	},
 	baashaunnuclear: {
 		num: -2047,
@@ -21775,6 +21793,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		evoLevel: 22,
 		evos: ["Baariette"],
 		eggGroups: ["Monster", "Field"],
+		otherFormes: ["Baaschaf-Nuclear"],
+		formeOrder: ["Baaschaf", "Baaschaf-Nuclear"],
 	},
 	baaschafnuclear: {
 		num: -2048,
@@ -21805,8 +21825,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		prevo: "Baaschaf",
 		evoLevel: 44,
 		eggGroups: ["Monster", "Field"],
-		otherFormes: ["Baariette-Mega"],
-		formeOrder: ["Baariette", "Baariette-Mega"],
+		otherFormes: ["Baariette-Nuclear", "Baariette-Mega", "Baariette-Nuclear-Mega"],
+		formeOrder: ["Baariette", "Baariette-Nuclear", "Baariette-Mega", "Baariette-Nuclear-Mega"],
 	},
 	baariettemega: {
 		num: -2049,
@@ -21837,8 +21857,6 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		prevo: "Baaschaf-Nuclear",
 		evoLevel: 44,
 		eggGroups: ["Undiscovered"],
-		otherFormes: ["Baariette-Nuclear-Mega"],
-		formeOrder: ["Baariette-Nuclear", "Baariette-Nuclear-Mega"],
 	},
 	baariettenuclearmega: {
 		num: -2049,
@@ -21853,7 +21871,7 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		weightkg: 115.7,
 		color: "Black",
 		eggGroups: ["Undiscovered"],
-		requiredItem: "Nuclear Baariettite",
+		requiredItem: "Baariettite",
 	},
 	tricwe: {
 		num: -2050,
@@ -21894,6 +21912,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Purple",
 		evos: ["Trawpint"],
 		eggGroups: ["Field", "Dragon"],
+		otherFormes: ["Costraw-Nuclear"],
+		formeOrder: ["Costraw", "Costraw-Nuclear"],
 	},
 	costrawnuclear: {
 		num: -2052,
@@ -21920,6 +21940,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		prevo: "Costraw",
 		evoLevel: 28,
 		eggGroups: ["Field", "Dragon"],
+		otherFormes: ["Trawpint-Nuclear"],
+		formeOrder: ["Trawpint", "Trawpint-Nuclear"],
 	},
 	trawpintnuclear: {
 		num: -2053,
@@ -22167,6 +22189,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		prevo: "Corsola",
 		evoType: "levelFriendship",
 		eggGroups: ["Water 1", "Water 3"],
+		otherFormes: ["Corsoreef-Nuclear"],
+		formeOrder: ["Corsoreef", "Corsoreef-Nuclear"],
 	},
 	corsoreefnuclear: {
 		num: -2063,
@@ -22195,6 +22219,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Blue",
 		evos: ["Tubareel"],
 		eggGroups: ["Water 2"],
+		otherFormes: ["Tubjaw-Nuclear"],
+		formeOrder: ["Tubjaw", "Tubjaw-Nuclear"],
 	},
 	tubjawnuclear: {
 		num: -2064,
@@ -22223,6 +22249,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		prevo: "Tubjaw",
 		evoLevel: 34,
 		eggGroups: ["Water 2"],
+		otherFormes: ["Tubareel-Nuclear"],
+		formeOrder: ["Tubareel", "Tubareel-Nuclear"],
 	},
 	tubareelnuclear: {
 		num: -2065,
@@ -22290,6 +22318,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Green",
 		evos: ["Gellin"],
 		eggGroups: ["Amorphous"],
+		otherFormes: ["Nupin-Nuclear"],
+		formeOrder: ["Nupin", "Nupin-Nuclear"],
 	},
 	nupinnuclear: {
 		num: -2069,
@@ -22318,6 +22348,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		prevo: "Nupin",
 		evoLevel: 35,
 		eggGroups: ["Amorphous"],
+		otherFormes: ["Gellin-Nuclear"],
+		formeOrder: ["Gellin", "Gellin-Nuclear"],
 	},
 	gellinnuclear: {
 		num: -2070,
@@ -22344,6 +22376,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		weightkg: 90.4,
 		color: "Green",
 		eggGroups: ["Dragon", "Monster"],
+		otherFormes: ["Barand-Nuclear"],
+		formeOrder: ["Barand", "Barand-Nuclear"],
 	},
 	barandnuclear: {
 		num: -2071,
@@ -22438,6 +22472,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Purple",
 		evos: ["Paraboom"],
 		eggGroups: ["Field"],
+		otherFormes: ["Paraudio-Nuclear"],
+		formeOrder: ["Paraudio", "Paraudio-Nuclear"],
 	},
 	paraudionuclear: {
 		num: -2076,
@@ -22464,6 +22500,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		prevo: "Paraudio",
 		evoLevel: 38,
 		eggGroups: ["Field"],
+		otherFormes: ["Paraboom-Nuclear"],
+		formeOrder: ["Paraboom", "Paraboom-Nuclear"],
 	},
 	paraboomnuclear: {
 		num: -2077,
@@ -23001,6 +23039,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Brown",
 		evos: ["Luchabra"],
 		eggGroups: ["Field", "Human-Like"],
+		otherFormes: ["Chupacho-Nuclear"],
+		formeOrder: ["Chupacho", "Chupacho-Nuclear"],
 	},
 	chupachonuclear: {
 		num: -2111,
@@ -23027,6 +23067,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		prevo: "Chupacho",
 		evoLevel: 38,
 		eggGroups: ["Field", "Human-Like"],
+		otherFormes: ["Luchabra-Nuclear"],
+		formeOrder: ["Luchabra", "Luchabra-Nuclear"],
 	},
 	luchabranuclear: {
 		num: -2112,
@@ -23296,6 +23338,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Black",
 		evos: ["Haagross"],
 		eggGroups: ["Bug", "Water 1"],
+		otherFormes: ["Hagoop-Nuclear"],
+		formeOrder: ["Hagoop", "Hagoop-Nuclear"],
 	},
 	hagoopnuclear: {
 		num: -2132,
@@ -23324,6 +23368,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		prevo: "Hagoop",
 		evoLevel: 45,
 		eggGroups: ["Bug", "Water 1"],
+		otherFormes: ["Haagross-Nuclear"],
+		formeOrder: ["Haagross", "Haagross-Nuclear"],
 	},
 	haagrossnuclear: {
 		num: -2133,
@@ -23739,6 +23785,8 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		color: "Blue",
 		tags: ["Sub-Legendary"],
 		eggGroups: ["Undiscovered"],
+		otherFormes: ["Actan-Nuclear"],
+		formeOrder: ["Actan", "Actan-Nuclear"],
 	},
 	actannuclear: {
 		num: -2162,
