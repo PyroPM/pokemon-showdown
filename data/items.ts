@@ -1645,13 +1645,13 @@ export const Items: import('../sim/dex-items').ItemDataTable = {
 		gen: 2,
 	},
 	dramasamaite: {
-		name: "Dramasamaite",
+		name: "Dramsamaite",
 		spritenum: 580,
 		megaStone: {
-			"Dramasama": "Dramasama-Mega",
-			"Dramasama-Nuclear": "Dramasama-Nuclear-Mega",
+			"Dramsama": "Dramsama-Mega",
+			"Dramsama-Nuclear": "Dramsama-Nuclear-Mega",
 		},
-		itemUser: ["Dramasama", "Dramasama-Nuclear"],
+		itemUser: ["Dramsama", "Dramsama-Nuclear"],
 		onTakeItem(item, source) {
 			return !item.megaStone?.[source.baseSpecies.baseSpecies];
 		},
