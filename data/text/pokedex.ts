@@ -3725,6 +3725,681 @@ export const PokedexText: { [id: IDEntry]: PokedexText } = {
 	astrolotl: {
 		name: "Astrolotl",
 	},
+	orchynx: {
+		name: "Orchynx",
+	},
+	metalynx: {
+		name: "Metalynx",
+	},
+	metalynxmega: {
+		name: "Metalynx-Mega",
+	},
+	raptorch: {
+		name: "Raptorch",
+	},
+	archilles: {
+		name: "Archilles",
+	},
+	archillesmega: {
+		name: "Archilles-Mega",
+	},
+	eletux: {
+		name: "Eletux",
+	},
+	electruxo: {
+		name: "Electruxo",
+	},
+	electruxomega: {
+		name: "Electruxo-Mega",
+	},
+	chyinmunk: {
+		name: "Chyinmunk",
+	},
+	chyinmunknuclear: {
+		name: "Chyinmunk-Nuclear",
+	},
+	kinetmunk: {
+		name: "Kinetmunk",
+	},
+	kinetmunknuclear: {
+		name: "Kinetmunk-Nuclear",
+	},
+	birbie: {
+		name: "Birbie",
+	},
+	aveden: {
+		name: "Aveden",
+	},
+	splendifowl: {
+		name: "Splendifowl",
+	},
+	cubbug: {
+		name: "Cubbug",
+	},
+	cubblfly: {
+		name: "Cubblfly",
+	},
+	nimflora: {
+		name: "Nimflora",
+	},
+	barewl: {
+		name: "Barewl",
+	},
+	dearewl: {
+		name: "Dearewl",
+	},
+	gararewl: {
+		name: "Gararewl",
+	},
+	grozard: {
+		name: "Grozard",
+	},
+	terlard: {
+		name: "Terlard",
+	},
+	tonemy: {
+		name: "Tonemy",
+	},
+	tonemynuclear: {
+		name: "Tonemy-Nuclear",
+	},
+	tofurang: {
+		name: "Tofurang",
+	},
+	tofurangnuclear: {
+		name: "Tofurang-Nuclear",
+	},
+	dunseraph: {
+		name: "Dunseraph",
+	},
+	fortog: {
+		name: "Fortog",
+	},
+	folerog: {
+		name: "Folerog",
+	},
+	blubelrog: {
+		name: "Blubelrog",
+	},
+	feleng: {
+		name: "Feleng",
+	},
+	felunge: {
+		name: "Felunge",
+	},
+	feliger: {
+		name: "Feliger",
+	},
+	empirilla: {
+		name: "Empirilla",
+	},
+	owten: {
+		name: "Owten",
+	},
+	owtennuclear: {
+		name: "Owten-Nuclear",
+	},
+	eshouten: {
+		name: "Eshouten",
+	},
+	eshoutennuclear: {
+		name: "Eshouten-Nuclear",
+	},
+	smore: {
+		name: "Smore",
+	},
+	firoke: {
+		name: "Firoke",
+	},
+	brailip: {
+		name: "Brailip",
+	},
+	brainoar: {
+		name: "Brainoar",
+	},
+	tancoon: {
+		name: "Tancoon",
+	},
+	tancoonnuclear: {
+		name: "Tancoon-Nuclear",
+	},
+	tanscure: {
+		name: "Tanscure",
+	},
+	tanscurenuclear: {
+		name: "Tanscure-Nuclear",
+	},
+	sponee: {
+		name: "Sponee",
+	},
+	sponaree: {
+		name: "Sponaree",
+	},
+	pahar: {
+		name: "Pahar",
+	},
+	paharnuclear: {
+		name: "Pahar-Nuclear",
+	},
+	palij: {
+		name: "Palij",
+	},
+	palijnuclear: {
+		name: "Palij-Nuclear",
+	},
+	pajay: {
+		name: "Pajay",
+	},
+	pajaynuclear: {
+		name: "Pajay-Nuclear",
+	},
+	jerbolta: {
+		name: "Jerbolta",
+	},
+	jerboltanuclear: {
+		name: "Jerbolta-Nuclear",
+	},
+	comite: {
+		name: "Comite",
+	},
+	cometeor: {
+		name: "Cometeor",
+	},
+	astronite: {
+		name: "Astronite",
+	},
+	baashaun: {
+		name: "Baashaun",
+	},
+	baashaunnuclear: {
+		name: "Baashaun-Nuclear",
+	},
+	baaschaf: {
+		name: "Baaschaf",
+	},
+	baaschafnuclear: {
+		name: "Baaschaf-Nuclear",
+	},
+	baariette: {
+		name: "Baariette",
+	},
+	baariettenuclear: {
+		name: "Baariette-Nuclear",
+	},
+	baariettemega: {
+		name: "Baariette-Mega",
+	},
+	baariettenuclearmega: {
+		name: "Baariette-Nuclear-Mega",
+	},
+	tricwe: {
+		name: "Tricwe",
+	},
+	harylect: {
+		name: "Harylect",
+	},
+	costraw: {
+		name: "Costraw",
+	},
+	costrawnuclear: {
+		name: "Costraw-Nuclear",
+	},
+	trawpint: {
+		name: "Trawpint",
+	},
+	trawpintnuclear: {
+		name: "Trawpint-Nuclear",
+	},
+	lunapup: {
+		name: "Lunapup",
+	},
+	herolune: {
+		name: "Herolune",
+	},
+	minyan: {
+		name: "Minyan",
+	},
+	minyanmystery: {
+		name: "Minyan-Mystery",
+	},
+	vilucard: {
+		name: "Vilucard",
+	},
+	vilucardmystery: {
+		name: "Vilucard-Mystery",
+	},
+	modrille: {
+		name: "Modrille",
+	},
+	drilgann: {
+		name: "Drilgann",
+	},
+	drilgannmega: {
+		name: "Drilgann-Mega",
+	},
+	cocaran: {
+		name: "Cocaran",
+	},
+	cocaranmystery: {
+		name: "Cocaran-Mystery",
+	},
+	cararalm: {
+		name: "Cararalm",
+	},
+	cararalmmystery: {
+		name: "Cararalm-Mystery",
+	},
+	cocancer: {
+		name: "Cocancer",
+	},
+	cocancermystery: {
+		name: "Cocancer-Mystery",
+	},
+	corsoreef: {
+		name: "Corsoreef",
+	},
+	corsoreefnuclear: {
+		name: "Corsoreef-Nuclear",
+	},
+	tubjaw: {
+		name: "Tubjaw",
+	},
+	tubjawnuclear: {
+		name: "Tubjaw-Nuclear",
+	},
+	tubareel: {
+		name: "Tubareel",
+	},
+	tubareelnuclear: {
+		name: "Tubareel-Nuclear",
+	},
+	cassnail: {
+		name: "Cassnail",
+	},
+	sableau: {
+		name: "Sableau",
+	},
+	escartress: {
+		name: "Escartress",
+	},
+	nupin: {
+		name: "Nupin",
+	},
+	nupinnuclear: {
+		name: "Nupin-Nuclear",
+	},
+	gellin: {
+		name: "Gellin",
+	},
+	gellinnuclear: {
+		name: "Gellin-Nuclear",
+	},
+	barand: {
+		name: "Barand",
+	},
+	barandnuclear: {
+		name: "Barand-Nuclear",
+	},
+	glaslug: {
+		name: "Glaslug",
+	},
+	glavinug: {
+		name: "Glavinug",
+	},
+	s51: {
+		name: "S51",
+	},
+	s51a: {
+		name: "S51-A",
+	},
+	s51amega: {
+		name: "S51-A-Mega",
+	},
+	paraudio: {
+		name: "Paraudio",
+	},
+	paraudionuclear: {
+		name: "Paraudio-Nuclear",
+	},
+	paraboom: {
+		name: "Paraboom",
+	},
+	paraboomnuclear: {
+		name: "Paraboom-Nuclear",
+	},
+	flager: {
+		name: "Flager",
+	},
+	inflagetah: {
+		name: "Inflagetah",
+	},
+	inflagetahmega: {
+		name: "Inflagetah-Mega",
+	},
+	chimical: {
+		name: "Chimical",
+	},
+	chimaconda: {
+		name: "Chimaconda",
+	},
+	tikiki: {
+		name: "Tikiki",
+	},
+	frikitiki: {
+		name: "Frikitiki",
+	},
+	unymph: {
+		name: "Unymph",
+	},
+	harptera: {
+		name: "Harptera",
+	},
+	chicoatl: {
+		name: "Chicoatl",
+	},
+	quetzoral: {
+		name: "Quetzoral",
+	},
+	coatlith: {
+		name: "Coatlith",
+	},
+	tracton: {
+		name: "Tracton",
+	},
+	snopach: {
+		name: "Snopach",
+	},
+	dermafrost: {
+		name: "Dermafrost",
+	},
+	slothohm: {
+		name: "Slothohm",
+	},
+	theriamp: {
+		name: "Theriamp",
+	},
+	titanice: {
+		name: "Titanice",
+	},
+	frynai: {
+		name: "Frynai",
+	},
+	saidine: {
+		name: "Saidine",
+	},
+	daikatuna: {
+		name: "Daikatuna",
+	},
+	selkid: {
+		name: "Selkid",
+	},
+	syrentide: {
+		name: "Syrentide",
+	},
+	syrentidemega: {
+		name: "Syrentide-Mega",
+	},
+	miasmedic: {
+		name: "Miasmedic",
+	},
+	jackdeary: {
+		name: "Jackdeary",
+	},
+	jackdearymystery: {
+		name: "Jackdeary-Mystery",
+	},
+	winotinger: {
+		name: "Winotinger",
+	},
+	winotingermystery: {
+		name: "Winotinger-Mystery",
+	},
+	duplicat: {
+		name: "Duplicat",
+	},
+	nucleon: {
+		name: "Nucleon",
+	},
+	ratsy: {
+		name: "Ratsy",
+	},
+	raffiti: {
+		name: "Raffiti",
+	},
+	gargryph: {
+		name: "Gargryph",
+	},
+	masking: {
+		name: "Masking",
+	},
+	maskingnuclear: {
+		name: "Masking-Nuclear",
+	},
+	dramsama: {
+		name: "Dramsama",
+	},
+	dramsamanuclear: {
+		name: "Dramsama-Nuclear",
+	},
+	dramsamamega: {
+		name: "Dramsama-Mega",
+	},
+	dramsamanuclearmega: {
+		name: "Dramsama-Nuclear-Mega",
+	},
+	dramsamamegadark: {
+		name: "Dramsama-Mega-Dark",
+	},
+	dramsamanuclearmegadark: {
+		name: "Dramsama-Nuclear-Mega-Dark",
+	},
+	antarki: {
+		name: "Antarki",
+	},
+	chupacho: {
+		name: "Chupacho",
+	},
+	chupachonuclear: {
+		name: "Chupacho-Nuclear",
+	},
+	luchabra: {
+		name: "Luchabra",
+	},
+	luchabranuclear: {
+		name: "Luchabra-Nuclear",
+	},
+	linkite: {
+		name: "Linkite",
+	},
+	chainite: {
+		name: "Chainite",
+	},
+	pufluff: {
+		name: "Pufluff",
+	},
+	pufluffmystery: {
+		name: "Pufluff-Mystery",
+	},
+	alpico: {
+		name: "Alpico",
+	},
+	alpicomystery: {
+		name: "Alpico-Mystery",
+	},
+	anderind: {
+		name: "Anderind",
+	},
+	anderindmystery: {
+		name: "Anderind-Mystery",
+	},
+	colarva: {
+		name: "Colarva",
+	},
+	frosulo: {
+		name: "Frosulo",
+	},
+	frosthra: {
+		name: "Frosthra",
+	},
+	fafurr: {
+		name: "Fafurr",
+	},
+	fafninter: {
+		name: "Fafninter",
+	},
+	shrimputy: {
+		name: "Shrimputy",
+	},
+	krilvolver: {
+		name: "Krilvolver",
+	},
+	lavent: {
+		name: "Lavent",
+	},
+	swabone: {
+		name: "Swabone",
+	},
+	skelerogue: {
+		name: "Skelerogue",
+	},
+	navighast: {
+		name: "Navighast",
+	},
+	stenowatt: {
+		name: "Stenowatt",
+	},
+	jungore: {
+		name: "Jungore",
+	},
+	majungold: {
+		name: "Majungold",
+	},
+	hagoop: {
+		name: "Hagoop",
+	},
+	hagoopnuclear: {
+		name: "Hagoop-Nuclear",
+	},
+	haagross: {
+		name: "Haagross",
+	},
+	haagrossnuclear: {
+		name: "Haagross-Nuclear",
+	},
+	xenomite: {
+		name: "Xenomite",
+	},
+	xenogen: {
+		name: "Xenogen",
+	},
+	xenoqueen: {
+		name: "Xenoqueen",
+	},
+	hazma: {
+		name: "Hazma",
+	},
+	geigeroach: {
+		name: "Geigeroach",
+	},
+	minicorn: {
+		name: "Minicorn",
+	},
+	kiricorn: {
+		name: "Kiricorn",
+	},
+	kiricornmega: {
+		name: "Kiricorn-Mega",
+	},
+	oblivicorn: {
+		name: "Oblivicorn",
+	},
+	oblivicornmega: {
+		name: "Oblivicorn-Mega",
+	},
+	luxi: {
+		name: "Luxi",
+	},
+	luxor: {
+		name: "Luxor",
+	},
+	luxelong: {
+		name: "Luxelong",
+	},
+	praseopunk: {
+		name: "Praseopunk",
+	},
+	neopunk: {
+		name: "Neopunk",
+	},
+	sheebit: {
+		name: "Sheebit",
+	},
+	terrabbit: {
+		name: "Terrabbit",
+	},
+	laissure: {
+		name: "Laissure",
+	},
+	volchik: {
+		name: "Volchik",
+	},
+	voltasu: {
+		name: "Voltasu",
+	},
+	yatagaryu: {
+		name: "Yatagaryu",
+	},
+	devimp: {
+		name: "Devimp",
+	},
+	fallengel: {
+		name: "Fallengel",
+	},
+	beliaddon: {
+		name: "Beliaddon",
+	},
+	seikamater: {
+		name: "Seikamater",
+	},
+	garlikid: {
+		name: "Garlikid",
+	},
+	baitatao: {
+		name: "Baitatao",
+	},
+	leviathao: {
+		name: "Leviathao",
+	},
+	krakanao: {
+		name: "Krakanao",
+	},
+	lanthan: {
+		name: "Lanthan",
+	},
+	actan: {
+		name: "Actan",
+	},
+	actannuclear: {
+		name: "Actan-Nuclear",
+	},
+	urayne: {
+		name: "Urayne",
+	},
+	uraynebeta: {
+		name: "Urayne-Beta",
+	},
+	uraynegamma: {
+		name: "Urayne-Gamma",
+	},
+	aotius: {
+		name: "Aotius",
+	},
+	mutios: {
+		name: "Mutios",
+	},
+	zephy: {
+		name: "Zephy",
+	},
 	pokestarsmeargle: {
 		name: "Pokestar Smeargle",
 	},

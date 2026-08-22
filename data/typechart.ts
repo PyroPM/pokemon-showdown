@@ -22,7 +22,7 @@ export const TypeChart: import('../sim/dex-data').TypeDataTable = {
 			Stellar: 0,
 			Water: 0,
 		},
-		HPivs: { atk: 30, def: 30, spd: 30 },
+		HPivs: { spd: 30, spe: 30 },
 		HPdvs: { atk: 13, def: 13 },
 	},
 	dark: {
@@ -49,7 +49,7 @@ export const TypeChart: import('../sim/dex-data').TypeDataTable = {
 			Stellar: 0,
 			Water: 0,
 		},
-		HPivs: {},
+		HPivs: { atk: 30 },
 	},
 	dragon: {
 		damageTaken: {
@@ -74,7 +74,7 @@ export const TypeChart: import('../sim/dex-data').TypeDataTable = {
 			Stellar: 0,
 			Water: 2,
 		},
-		HPivs: { atk: 30 },
+		HPivs: { def: 30 },
 		HPdvs: { def: 14 },
 	},
 	electric: {
@@ -127,6 +127,7 @@ export const TypeChart: import('../sim/dex-data').TypeDataTable = {
 			Stellar: 0,
 			Water: 0,
 		},
+		HPivs: { },
 	},
 	fighting: {
 		damageTaken: {
@@ -178,7 +179,7 @@ export const TypeChart: import('../sim/dex-data').TypeDataTable = {
 			Stellar: 0,
 			Water: 1,
 		},
-		HPivs: { atk: 30, spa: 30, spe: 30 },
+		HPivs: { def: 30, spa: 30, spe: 30 },
 		HPdvs: { atk: 14, def: 12 },
 	},
 	flying: {
@@ -204,7 +205,7 @@ export const TypeChart: import('../sim/dex-data').TypeDataTable = {
 			Stellar: 0,
 			Water: 0,
 		},
-		HPivs: { hp: 30, atk: 30, def: 30, spa: 30, spd: 30 },
+		HPivs: { spa: 30, spd: 30, spe: 30 },
 		HPdvs: { atk: 12, def: 13 },
 	},
 	ghost: {
@@ -258,7 +259,7 @@ export const TypeChart: import('../sim/dex-data').TypeDataTable = {
 			Stellar: 0,
 			Water: 2,
 		},
-		HPivs: { atk: 30, spa: 30 },
+		HPivs: { def: 30, spa: 30 },
 		HPdvs: { atk: 14, def: 14 },
 	},
 	ground: {
@@ -313,7 +314,7 @@ export const TypeChart: import('../sim/dex-data').TypeDataTable = {
 			Stellar: 0,
 			Water: 0,
 		},
-		HPivs: { atk: 30, def: 30 },
+		HPivs: { spe: 30 },
 		HPdvs: { def: 13 },
 	},
 	normal: {
@@ -355,7 +356,7 @@ export const TypeChart: import('../sim/dex-data').TypeDataTable = {
 			Ground: 1,
 			Ice: 1,
 			Normal: 1,
-			Nuclear: 0,
+			Nuclear: 2,
 			Poison: 1,
 			Psychic: 1,
 			Rock: 1,
@@ -415,7 +416,7 @@ export const TypeChart: import('../sim/dex-data').TypeDataTable = {
 			Stellar: 0,
 			Water: 0,
 		},
-		HPivs: { atk: 30, spe: 30 },
+		HPivs: { def: 30, spe: 30 },
 		HPdvs: { def: 12 },
 	},
 	rock: {
@@ -521,7 +522,7 @@ export const TypeChart: import('../sim/dex-data').TypeDataTable = {
 			Stellar: 0,
 			Water: 2,
 		},
-		HPivs: { atk: 30, def: 30, spa: 30 },
+		HPivs: { spa: 30, spe: 30 },
 		HPdvs: { atk: 14, def: 13 },
 	},
 };

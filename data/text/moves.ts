@@ -253,6 +253,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "No additional effect.",
 		shortDesc: "No additional effect. Hits adjacent foes.",
 	},
+	atomicpunch: {
+		name: "Atomic Punch",
+		desc: "Has a 15% chance to paralyze the target.",
+		shortDesc: "15% chance to paralyze the target.",
+	},
 	attackorder: {
 		name: "Attack Order",
 		desc: "Has a higher chance for a critical hit.",
@@ -833,10 +838,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	camouflage: {
 		name: "Camouflage",
-		desc: "The user's type changes based on the battle terrain. Normal type on the regular Wi-Fi terrain, Electric type during Electric Terrain, Fairy type during Misty Terrain, Grass type during Grassy Terrain, and Psychic type during Psychic Terrain. Fails if the user's type cannot be changed or if the user is already purely that type.",
+		desc: "The user's type changes based on the battle terrain. Normal type on the regular Wi-Fi terrain, Electric type during Electric Terrain, Fairy type during Misty Terrain, Grass type during Grassy Terrain, Psychic type during Psychic Terrain, and Poison type during Sticky Terrain. Fails if the user's type cannot be changed or if the user is already purely that type.",
 		shortDesc: "Changes user's type by terrain (default Normal).",
 		gen6: {
-			desc: "The user's type changes based on the battle terrain. Normal type on the regular Wi-Fi terrain, Electric type during Electric Terrain, Fairy type during Misty Terrain, and Grass type during Grassy Terrain. Fails if the user's type cannot be changed or if the user is already purely that type.",
+			desc: "The user's type changes based on the battle terrain. Normal type on the regular Wi-Fi terrain, Electric type during Electric Terrain, Fairy type during Misty Terrain, Grass type during Grassy Terrain, and Poison type during Sticky Terrain. Fails if the user's type cannot be changed or if the user is already purely that type.",
 		},
 		gen5: {
 			desc: "The user's type changes based on the battle terrain. Ground type on the regular Wi-Fi terrain. Fails if the user's type cannot be changed or if the user is already purely that type.",
@@ -858,6 +863,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	catastropika: {
 		name: "Catastropika",
 		shortDesc: "No additional effect.",
+	},
+	causticbreath: {
+		name: "Caustic Breath",
+		desc: "Has a 100% chance to lower the target's Defense and Special Defense by 1 stage.",
+		shortDesc: "100% chance to lower the target's Defense and Sp. Def by 1.",
 	},
 	ceaselessedge: {
 		name: "Ceaseless Edge",
@@ -1110,6 +1120,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		gen4: {
 			desc: "The user uses the last move used by any Pokemon, including itself. Fails if no move has been used, or if the last move used was Assist, Chatter, Copycat, Counter, Covet, Destiny Bond, Detect, Endure, Feint, Focus Punch, Follow Me, Helping Hand, Me First, Metronome, Mimic, Mirror Coat, Mirror Move, Protect, Sketch, Sleep Talk, Snatch, Struggle, Switcheroo, Thief, or Trick.",
 		},
+	},
+	coralbreak: {
+		name: "Coral Break",
+		desc: "Deals damage to the target based on its Defense instead of Special Defense.",
+		shortDesc: "Damages target based on Defense, not Sp. Def.",
 	},
 	coreenforcer: {
 		name: "Core Enforcer",
@@ -1630,6 +1645,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "If both the user and the target have not fainted, the target is forced to switch out and be replaced with a random unfainted ally. This effect fails if the target used Ingrain previously, has the Suction Cups Ability, or this move hit a substitute.",
 		shortDesc: "Forces the target to switch to a random ally.",
 	},
+	drainlife: {
+		name: "Drain Life",
+		desc: "The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
+		shortDesc: "User recovers 50% of the damage dealt.",
+	},
 	drainingkiss: {
 		name: "Draining Kiss",
 		desc: "The user recovers 3/4 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
@@ -1910,6 +1930,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "The user faints after using this move, unless this move broke the target's substitute. The target's Defense is halved during damage calculation.",
 		},
 	},
+	expunge: {
+		name: "Expunge",
+		desc: "This move's type effectiveness against Nuclear is changed to be super effective no matter what this move's type is. If the weather is Fallout, this move does not check accuracy.",
+		shortDesc: "Super effective on Nuclear. Can't miss in Fallout.",
+	},
 	extrasensory: {
 		name: "Extrasensory",
 		desc: "Has a 10% chance to make the target flinch.",
@@ -1965,6 +1990,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Fake Tears",
 		desc: "Lowers the target's Special Defense by 2 stages.",
 		shortDesc: "Lowers the target's Sp. Def by 2.",
+	},
+	fallout: {
+		name: "Fallout",
+		desc: "For 5 turns, the weather becomes Toxic Fallout, which reduces the weaknesses of the Nuclear type for Nuclear-type Pokemon from x2 to x1.5. At the end of every other turn except the last, all active Pokemon lose 1/32, 1/16, 1/8, 1/4, or 1/2 of their maximum HP, rounded down, based on their weakness to the Nuclear type; 0.25x, 0.5x, neutral, 2x, or 4x, respectively, unless they are a Steel or Nuclear type, or have the Magic Guard Ability. Fails if the current weather is Fallout.",
+		shortDesc: "For 5 turns, toxic fallout reduces Nuclear weaknesses.",
 	},
 	falsesurrender: {
 		name: "False Surrender",
@@ -2114,6 +2144,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Power doubles if the user moves before the target.",
 		shortDesc: "Power doubles if user moves before the target.",
 	},
+	fissionburst: {
+		name: "Fission Burst",
+		desc: "The user faints after using this move, even if this move fails for having no target. This move is prevented from executing if any active Pokemon has the Damp Ability.",
+		shortDesc: "Hits adjacent Pokemon. The user faints.",
+	},
 	fissure: {
 		name: "Fissure",
 		desc: "Deals damage to the target equal to the target's maximum HP. Ignores accuracy and evasiveness modifiers. This attack's accuracy is equal to (user's level - target's level + 30)%, and fails if the target is at a higher level. Pokemon with the Sturdy Ability are immune.",
@@ -2154,6 +2189,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Flame Charge",
 		desc: "Has a 100% chance to raise the user's Speed by 1 stage.",
 		shortDesc: "100% chance to raise the user's Speed by 1.",
+	},
+	flameimpact: {
+		name: "Flame Impact",
+		desc: "Thaws user.",
+		shortDesc: "Nearly always goes first. Thaws user.",
 	},
 	flamethrower: {
 		name: "Flamethrower",
@@ -2443,6 +2483,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		start: "  [POKEMON] foresaw an attack!",
 		activate: "  [TARGET] took the Future Sight attack!",
 	},
+	gammaray: {
+		name: "Gamma Ray",
+		shortDesc: "No additional effect.",
+	},
 	gastroacid: {
 		name: "Gastro Acid",
 		desc: "Causes the target's Ability to be rendered ineffective as long as it remains active. If the target uses Baton Pass, the replacement will remain under this effect. If the target's Ability is As One, Battle Bond, Comatose, Disguise, Gulp Missile, Ice Face, Multitype, Power Construct, RKS System, Schooling, Shields Down, Stance Change, Tera Shift, Zen Mode, or Zero to Hero, this move fails, and receiving the effect through Baton Pass ends the effect immediately.",
@@ -2469,6 +2513,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Raises the Attack and Special Attack of Pokemon on the user's side with the Plus or Minus Abilities by 1 stage.",
 		shortDesc: "Raises Atk, Sp. Atk of allies with Plus/Minus by 1.",
 	},
+	gemstoneglimmer: {
+		name: "Gemstone Glimmer",
+		desc: "Has a 25% chance to lower the target's accuracy by 1 stage.",
+		shortDesc: "25% chance to lower the target's accuracy by 1.",
+	},
 	genesissupernova: {
 		name: "Genesis Supernova",
 		desc: "If this move is successful, the terrain becomes Psychic Terrain.",
@@ -2480,6 +2529,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		shortDesc: "Charges, then raises SpA, SpD, Spe by 2 turn 2.",
 
 		prepare: "[POKEMON] is absorbing power!",
+	},
+	getlucky: {
+		name: "Get Lucky",
+		desc: "Raises the user's chance for a critical hit by 2 stages if the user does not already have this effect. Baton Pass can be used to transfer this effect to an ally.",
+		shortDesc: "Raises the user's critical hit ratio by 2.",
 	},
 	gigadrain: {
 		name: "Giga Drain",
@@ -2721,6 +2775,13 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Power is equal to the base move's Max Move power. If this move is successful, the effects of Electric Terrain, Grassy Terrain, Misty Terrain, and Psychic Terrain end, the effects of Reflect, Light Screen, Aurora Veil, Safeguard, Mist, G-Max Steelsurge, Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the target's side, and the effects of G-Max Steelsurge, Spikes, Toxic Spikes, Stealth Rock, and Sticky Web end for the user's side.",
 		shortDesc: "Base move affects power. Ends Terrain, hazards.",
 	},
+	goldenfist: {
+		name: "Golden Fist",
+		desc: "No additional effect.",
+		shortDesc: "Scatters coins.",
+
+		activate: "#payday",
+	},
 	grassknot: {
 		name: "Grass Knot",
 		desc: "This move's power is 20 if the target weighs less than 10 kg, 40 if less than 25 kg, 60 if less than 50 kg, 80 if less than 100 kg, 100 if less than 200 kg, and 120 if greater than or equal to 200 kg.",
@@ -2878,6 +2939,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		gen3: {
 			desc: "For 5 turns, the weather becomes Hail. At the end of each turn except the last, all active Pokemon lose 1/16 of their maximum HP, rounded down, unless they are an Ice type. Fails if the current weather is Hail.",
 		},
+	},
+	halflife: {
+		name: "Half-life",
+		desc: "Deals damage to the target equal to half of its current HP, rounded down, but not less than 1 HP.",
+		shortDesc: "Does damage equal to 1/2 target's current HP.",
 	},
 	hammerarm: {
 		name: "Hammer Arm",
@@ -3052,7 +3118,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	hiddenpower: {
 		name: "Hidden Power",
-		desc: "This move's type depends on the user's individual values (IVs), and can be any type but Fairy and Normal.",
+		desc: "This move's type depends on the user's individual values (IVs), and can be any type but Normal.",
 		shortDesc: "Varies in type based on the user's IVs.",
 		gen5: {
 			desc: "This move's type and power depend on the user's individual values (IVs). Power varies between 30 and 70, and type can be any but Normal.",
@@ -3070,6 +3136,9 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	hiddenpowerelectric: {
 		name: "Hidden Power Electric",
+	},
+	hiddenpowerfairy: {
+		name: "Hidden Power Fairy",
 	},
 	hiddenpowerfighting: {
 		name: "Hidden Power Fighting",
@@ -3359,6 +3428,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 
 		removeItem: "  [POKEMON]'s [ITEM] was burned up!",
 	},
+	infernalblade: {
+		name: "Infernal Blade",
+		desc: "Has a 10% chance to burn the target. This move's type effectiveness against Fairy is changed to be x4 super effective no matter what this move's type is.",
+		shortDesc: "10% chance to burn. Super effective x4 on Fairy.",
+	},
 	infernalparade: {
 		name: "Infernal Parade",
 		desc: "Has a 30% chance to burn the target. Power doubles if the target has a non-volatile status condition.",
@@ -3407,6 +3481,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		start: "  [POKEMON] planted its roots!",
 		block: "  [POKEMON] is anchored in place with its roots!",
 		heal: "  [POKEMON] absorbed nutrients with its roots!",
+	},
+	instantcrush: {
+		name: "Instant Crush",
+		desc: "No additional effect.",
+		shortDesc: "Usually goes first.",
 	},
 	instruct: {
 		name: "Instruct",
@@ -3565,6 +3644,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		shortDesc: "Until the end of the next turn, user's moves crit.",
 
 		start: "  [POKEMON] concentrated intensely!",
+	},
+	laserpulse: {
+		name: "Laser Pulse",
+		desc: "The type of this move varies; randonly chosen between Fire, Electric, and Ice.",
+		shortDesc: "Type varies.",
 	},
 	lashout: {
 		name: "Lash Out",
@@ -4099,10 +4183,25 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 10% chance to raise the user's Attack by 1 stage.",
 		shortDesc: "10% chance to raise the user's Attack by 1.",
 	},
+	metalcruncher: {
+		name: "Metal Cruncher",
+		desc: "Has a 50% chance to lower the target's Defense by 1 stage.",
+		shortDesc: "50% chance to lower the target's Defense by 1.",
+	},
 	metalsound: {
 		name: "Metal Sound",
 		desc: "Lowers the target's Special Defense by 2 stages.",
 		shortDesc: "Lowers the target's Sp. Def by 2.",
+	},
+	metalwhip: {
+		name: "Metal Whip",
+		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
+		shortDesc: "Traps and damages the target for 4-5 turns.",
+		gen7: {
+			desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Parting Shot, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
+		},
+
+		start: "  [POKEMON] was wrapped by [SOURCE]!",
 	},
 	meteorassault: {
 		name: "Meteor Assault",
@@ -4344,13 +4443,13 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	moonlight: {
 		name: "Moonlight",
-		desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect or if the user is holding Utility Umbrella, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Primordial Sea, Rain Dance, Sandstorm, or Snow, all rounded half down.",
+		desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect or if the user is holding Utility Umbrella, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Primordial Sea, Rain Dance, Sandstorm, Snow, Thunderstorm, or Fallout, all rounded half down.",
 		shortDesc: "Heals the user by a weather-dependent amount.",
 		gen8: {
-			desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect or if the user is holding Utility Umbrella, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Hail, Primordial Sea, Rain Dance, or Sandstorm, all rounded half down.",
+			desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect or if the user is holding Utility Umbrella, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Hail, Primordial Sea, Rain Dance, Sandstorm, Thunderstorm, or Fallout, all rounded half down.",
 		},
 		gen7: {
-			desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Hail, Primordial Sea, Rain Dance, or Sandstorm, all rounded half down.",
+			desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Hail, Primordial Sea, Rain Dance, Sandstorm, Thunderstorm, or Fallout, all rounded half down.",
 		},
 		gen5: {
 			desc: "The user restores 1/2 of its maximum HP if no weather conditions are in effect, 2/3 of its maximum HP if the weather is Sunny Day, and 1/4 of its maximum HP if the weather is Hail, Rain Dance, or Sandstorm, all rounded half down.",
@@ -4364,13 +4463,13 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	morningsun: {
 		name: "Morning Sun",
-		desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect or if the user is holding Utility Umbrella, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Primordial Sea, Rain Dance, Sandstorm, or Snow, all rounded half down.",
+		desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect or if the user is holding Utility Umbrella, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Primordial Sea, Rain Dance, Sandstorm, Snow, Thunderstorm, or Fallout, all rounded half down.",
 		shortDesc: "Heals the user by a weather-dependent amount.",
 		gen8: {
-			desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect or if the user is holding Utility Umbrella, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Hail, Primordial Sea, Rain Dance, or Sandstorm, all rounded half down.",
+			desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect or if the user is holding Utility Umbrella, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Hail, Primordial Sea, Rain Dance, Sandstorm, Thunderstorm, or Fallout, all rounded half down.",
 		},
 		gen7: {
-			desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Hail, Primordial Sea, Rain Dance, or Sandstorm, all rounded half down.",
+			desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Hail, Primordial Sea, Rain Dance, Sandstorm, Thunderstorm, or Fallout, all rounded half down.",
 		},
 		gen5: {
 			desc: "The user restores 1/2 of its maximum HP if no weather conditions are in effect, 2/3 of its maximum HP if the weather is Sunny Day, and 1/4 of its maximum HP if the weather is Hail, Rain Dance, or Sandstorm, all rounded half down.",
@@ -4455,10 +4554,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	naturepower: {
 		name: "Nature Power",
-		desc: "This move calls another move for use based on the battle terrain. Tri Attack on the regular Wi-Fi terrain, Thunderbolt during Electric Terrain, Moonblast during Misty Terrain, Energy Ball during Grassy Terrain, and Psychic during Psychic Terrain.",
+		desc: "This move calls another move for use based on the battle terrain. Tri Attack on the regular Wi-Fi terrain, Thunderbolt during Electric Terrain, Moonblast during Misty Terrain, Energy Ball during Grassy Terrain, Psychic during Psychic Terrain, and Sludge Bomb during Sticky Terrain.",
 		shortDesc: "Attack depends on terrain (default Tri Attack).",
 		gen6: {
-			desc: "This move calls another move for use based on the battle terrain. Tri Attack on the regular Wi-Fi terrain, Thunderbolt during Electric Terrain, Moonblast during Misty Terrain, and Energy Ball during Grassy Terrain.",
+			desc: "This move calls another move for use based on the battle terrain. Tri Attack on the regular Wi-Fi terrain, Thunderbolt during Electric Terrain, Moonblast during Misty Terrain, Energy Ball during Grassy Terrain, and Sludge Bomb during Sticky Terrain.",
 		},
 		gen5: {
 			desc: "This move calls another move for use based on the battle terrain. Earthquake on the regular Wi-Fi terrain.",
@@ -4536,6 +4635,20 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 30% chance to poison the target.",
 		shortDesc: "30% chance to poison the target.",
 	},
+	nuclearslash: {
+		name: "Nuclear Slash",
+		desc: "Has a higher chance for a critical hit.",
+		shortDesc: "High critical hit ratio.",
+	},
+	nuclearwaste: {
+		name: "Nuclear Waste",
+		shortDesc: "Badly poisons the target.",
+	},
+	nuclearwind: {
+		name: "Nuclear Wind",
+		desc: "Has a 5% chance to cause a Toxic Fallout for 5 turns.",
+		shortDesc: "5% chance to cause a Toxic Fallout for 5 turns.",
+	},
 	nuzzle: {
 		name: "Nuzzle",
 		desc: "Has a 100% chance to paralyze the target.",
@@ -4553,6 +4666,16 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		gen8: {
 			desc: "The user is protected from most attacks made by other Pokemon during this turn, and Pokemon trying to make contact with the user have their Defense lowered by 2 stages. Non-damaging moves go through this protection. This move has a 1/X chance of being successful, where X starts at 1 and triples each time this move is successfully used. X resets to 1 if this move fails, if the user's last move used is not Baneful Bunker, Detect, Endure, King's Shield, Max Guard, Obstruct, Protect, Quick Guard, Spiky Shield, or Wide Guard, or if it was one of those moves and the user's protection was broken. Fails if the user moves last this turn.",
 		},
+	},
+	oceanswrath: {
+		name: "Ocean's Wrath",
+		desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
+		shortDesc: "Traps and damages the target for 4-5 turns.",
+		gen7: {
+			desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Parting Shot, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
+		},
+
+		start: "  [POKEMON] became trapped in the vortex!",
 	},
 	oceanicoperetta: {
 		name: "Oceanic Operetta",
@@ -4953,6 +5076,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		start: "  [POKEMON] protected itself!",
 		block: "  [POKEMON] protected itself!",
 	},
+	protonbeam: {
+		name: "Proton Beam",
+		desc: "Lowers the user's Special Attack by 2 stages.",
+		shortDesc: "Lowers the user's Sp. Atk by 2.",
+	},
 	psybeam: {
 		name: "Psybeam",
 		desc: "Has a 10% chance to confuse the target.",
@@ -5083,6 +5211,14 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		desc: "Has a 10% chance to burn the target.",
 		shortDesc: "10% chance to burn the target. Thaws user.",
 	},
+	quantumleap: {
+		name: "Quantum Leap",
+		desc: "If this move is successful, it breaks through the target's Baneful Bunker, Detect, King's Shield, Protect, or Spiky Shield for this turn, allowing other Pokemon to attack the target normally. If the target's side is protected by Crafty Shield, Mat Block, Quick Guard, or Wide Guard, that protection is also broken for this turn and other Pokemon may attack the target's side normally. This attack charges on the first turn and executes on the second. On the first turn, the user avoids all attacks. If the user is holding a Power Herb, the move completes in one turn.",
+		shortDesc: "Disappears turn 1. Hits turn 2. Breaks protection.",
+
+		prepare: "#shadowforce",
+		activate: "#shadowforce",
+	},
 	quash: {
 		name: "Quash",
 		desc: "Causes the target to take its turn after all other Pokemon this turn, no matter the priority of its selected move. Fails if the target already moved this turn.",
@@ -5119,6 +5255,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Quiver Dance",
 		desc: "Raises the user's Special Attack, Special Defense, and Speed by 1 stage.",
 		shortDesc: "Raises the user's Sp. Atk, Sp. Def, Speed by 1.",
+	},
+	radioacid: {
+		name: "Radioacid",
+		desc: "Has a 30% chance to burn the target.",
+		shortDesc: "30% chance to burn the target.",
 	},
 	rage: {
 		name: "Rage",
@@ -5945,6 +6086,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		failSelect: "Sky Drop won't let [POKEMON] go!",
 		failTooHeavy: "  [POKEMON] is too heavy to be lifted!",
 	},
+	skyfall: {
+		name: "Sky Fall",
+		desc: "Has a 30% chance to paralyze the target.",
+		shortDesc: "30% chance to paralyze the target.",
+	},
 	skyuppercut: {
 		name: "Sky Uppercut",
 		desc: "This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop.",
@@ -6121,13 +6267,13 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	solarbeam: {
 		name: "Solar Beam",
-		desc: "This attack charges on the first turn and executes on the second. Power is halved if the weather is Primordial Sea, Rain Dance, Sandstorm, or Snow and the user is not holding Utility Umbrella. If the user is holding a Power Herb or the weather is Desolate Land or Sunny Day, the move completes in one turn. If the user is holding Utility Umbrella and the weather is Desolate Land or Sunny Day, the move still requires a turn to charge.",
+		desc: "This attack charges on the first turn and executes on the second. Power is halved if the weather is Primordial Sea, Rain Dance, Sandstorm, Snow, Thunderstorm, or Fallout and the user is not holding Utility Umbrella. If the user is holding a Power Herb or the weather is Desolate Land or Sunny Day, the move completes in one turn. If the user is holding Utility Umbrella and the weather is Desolate Land or Sunny Day, the move still requires a turn to charge.",
 		shortDesc: "Charges turn 1. Hits turn 2. No charge in sunlight.",
 		gen8: {
-			desc: "This attack charges on the first turn and executes on the second. Power is halved if the weather is Hail, Primordial Sea, Rain Dance, or Sandstorm and the user is not holding Utility Umbrella. If the user is holding a Power Herb or the weather is Desolate Land or Sunny Day, the move completes in one turn. If the user is holding Utility Umbrella and the weather is Desolate Land or Sunny Day, the move still requires a turn to charge.",
+			desc: "This attack charges on the first turn and executes on the second. Power is halved if the weather is Hail, Primordial Sea, Rain Dance, Sandstorm, Thunderstorm, or Fallout and the user is not holding Utility Umbrella. If the user is holding a Power Herb or the weather is Desolate Land or Sunny Day, the move completes in one turn. If the user is holding Utility Umbrella and the weather is Desolate Land or Sunny Day, the move still requires a turn to charge.",
 		},
 		gen7: {
-			desc: "This attack charges on the first turn and executes on the second. Power is halved if the weather is Hail, Primordial Sea, Rain Dance, or Sandstorm. If the user is holding a Power Herb or the weather is Desolate Land or Sunny Day, the move completes in one turn.",
+			desc: "This attack charges on the first turn and executes on the second. Power is halved if the weather is Hail, Primordial Sea, Rain Dance, Sandstorm, Thunderstorm, or Fallout. If the user is holding a Power Herb or the weather is Desolate Land or Sunny Day, the move completes in one turn.",
 		},
 		gen5: {
 			desc: "This attack charges on the first turn and executes on the second. Power is halved if the weather is Hail, Rain Dance, or Sandstorm. If the user is holding a Power Herb or the weather is Sunny Day, the move completes in one turn.",
@@ -6150,13 +6296,13 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	solarblade: {
 		name: "Solar Blade",
-		desc: "This attack charges on the first turn and executes on the second. Power is halved if the weather is Hail, Primordial Sea, Rain Dance, or Sandstorm and the user is not holding Utility Umbrella. If the user is holding a Power Herb or the weather is Desolate Land or Sunny Day, the move completes in one turn. If the user is holding Utility Umbrella and the weather is Desolate Land or Sunny Day, the move still requires a turn to charge.",
+		desc: "This attack charges on the first turn and executes on the second. Power is halved if the weather is Hail, Primordial Sea, Rain Dance, Sandstorm, Thunderstorm, or Fallout and the user is not holding Utility Umbrella. If the user is holding a Power Herb or the weather is Desolate Land or Sunny Day, the move completes in one turn. If the user is holding Utility Umbrella and the weather is Desolate Land or Sunny Day, the move still requires a turn to charge.",
 		shortDesc: "Charges turn 1. Hits turn 2. No charge in sunlight.",
 		gen8: {
-			desc: "This attack charges on the first turn and executes on the second. Power is halved if the weather is Primordial Sea, Rain Dance, Sandstorm, or Snow and the user is not holding Utility Umbrella. If the user is holding a Power Herb or the weather is Desolate Land or Sunny Day, the move completes in one turn. If the user is holding Utility Umbrella and the weather is Desolate Land or Sunny Day, the move still requires a turn to charge.",
+			desc: "This attack charges on the first turn and executes on the second. Power is halved if the weather is Primordial Sea, Rain Dance, Sandstorm, Snow, Thunderstorm, or Fallout and the user is not holding Utility Umbrella. If the user is holding a Power Herb or the weather is Desolate Land or Sunny Day, the move completes in one turn. If the user is holding Utility Umbrella and the weather is Desolate Land or Sunny Day, the move still requires a turn to charge.",
 		},
 		gen7: {
-			desc: "This attack charges on the first turn and executes on the second. Power is halved if the weather is Hail, Primordial Sea, Rain Dance, or Sandstorm. If the user is holding a Power Herb or the weather is Desolate Land or Sunny Day, the move completes in one turn.",
+			desc: "This attack charges on the first turn and executes on the second. Power is halved if the weather is Hail, Primordial Sea, Rain Dance, Sandstorm, Thunderstorm, or Fallout. If the user is holding a Power Herb or the weather is Desolate Land or Sunny Day, the move completes in one turn.",
 		},
 
 		prepare: "#solarbeam",
@@ -6394,13 +6540,18 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	steelroller: {
 		name: "Steel Roller",
-		desc: "Fails if there is no terrain active. Ends the effects of Electric Terrain, Grassy Terrain, Misty Terrain, and Psychic Terrain.",
+		desc: "Fails if there is no terrain active. Ends the effects of Electric Terrain, Grassy Terrain, Misty Terrain, Psychic Terrain, and Sticky Terrain.",
 		shortDesc: "Fails if there is no terrain active. Ends the terrain.",
 	},
 	steelwing: {
 		name: "Steel Wing",
 		desc: "Has a 10% chance to raise the user's Defense by 1 stage.",
 		shortDesc: "10% chance to raise the user's Defense by 1.",
+	},
+	stickyterrain: {
+		name: "Sticky Terrain",
+		desc: "For 5 turns, the terrain becomes Sticky Terrain. During the effect, grounded Pokemon cannot hit with moves with priority greater than 0, unless the target is an ally. Camouflage transforms the user into a Poison type, Nature Power becomes Sludge Bomb, and Secret Power has a 30% chance to poison. Fails if the current terrain is Sticky Terrain.",
+		shortDesc: "5 turns. Grounded: can't use priority.",
 	},
 	stickyweb: {
 		name: "Sticky Web",
@@ -6549,6 +6700,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "Paralyzes the target.",
 		},
 	},
+	subduction: {
+		name: "Subduction",
+		desc: "Has a 100% chance to lower the target's Speed by 2 stages. Confuses user.",
+		shortDesc: "100% chance lower adjacent Pkmn Speed by 2. Confuses user.",
+	},
 	submission: {
 		name: "Submission",
 		desc: "If the target lost HP, the user takes recoil damage equal to 1/4 the HP lost by the target, rounded half up, but not less than 1 HP.",
@@ -6595,6 +6751,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		gen4: {
 			desc: "Fails if the target did not select a physical or special attack for use this turn, or if the target moves before the user.",
 		},
+	},
+	suddenstrike: {
+		name: "Sudden Strike",
+		desc: "No additional effect.",
+		shortDesc: "Usually goes first.",
 	},
 	sunnyday: {
 		name: "Sunny Day",
@@ -6746,13 +6907,13 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	synthesis: {
 		name: "Synthesis",
-		desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect or if the user is holding Utility Umbrella, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Primordial Sea, Rain Dance, Sandstorm, or Snow, all rounded half down.",
+		desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect or if the user is holding Utility Umbrella, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Primordial Sea, Rain Dance, Sandstorm, Snow, Thunderstorm, or Fallout, all rounded half down.",
 		shortDesc: "Heals the user by a weather-dependent amount.",
 		gen8: {
-			desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect or if the user is holding Utility Umbrella, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Hail, Primordial Sea, Rain Dance, or Sandstorm, all rounded half down.",
+			desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect or if the user is holding Utility Umbrella, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Hail, Primordial Sea, Rain Dance, Sandstorm, Thunderstorm, or Fallout, all rounded half down.",
 		},
 		gen7: {
-			desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Hail, Primordial Sea, Rain Dance, or Sandstorm, all rounded half down.",
+			desc: "The user restores 1/2 of its maximum HP if Delta Stream or no weather conditions are in effect, 2/3 of its maximum HP if the weather is Desolate Land or Sunny Day, and 1/4 of its maximum HP if the weather is Hail, Primordial Sea, Rain Dance, Sandstorm, Thunderstorm, or Fallout, all rounded half down.",
 		},
 		gen5: {
 			desc: "The user restores 1/2 of its maximum HP if no weather conditions are in effect, 2/3 of its maximum HP if the weather is Sunny Day, and 1/4 of its maximum HP if the weather is Hail, Rain Dance, or Sandstorm, all rounded half down.",
@@ -6936,7 +7097,7 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	terrainpulse: {
 		name: "Terrain Pulse",
-		desc: "Power doubles if the user is grounded and a terrain is active, and this move's type changes to match. Electric type during Electric Terrain, Grass type during Grassy Terrain, Fairy type during Misty Terrain, and Psychic type during Psychic Terrain.",
+		desc: "Power doubles if the user is grounded and a terrain is active, and this move's type changes to match. Electric type during Electric Terrain, Grass type during Grassy Terrain, Fairy type during Misty Terrain, Psychic type during Psychic Terrain, and Poison type during Psychic Terrain.",
 		shortDesc: "User on terrain: power doubles, type varies.",
 	},
 	thief: {
@@ -7014,10 +7175,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	thunder: {
 		name: "Thunder",
-		desc: "Has a 30% chance to paralyze the target. This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop. If the weather is Primordial Sea or Rain Dance, this move does not check accuracy. If the weather is Desolate Land or Sunny Day, this move's accuracy is 50%. If this move is used against a Pokemon holding Utility Umbrella, this move's accuracy remains at 70%.",
+		desc: "Has a 30% chance to paralyze the target. This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop. If the weather is Primordial Sea, Rain Dance or Thunderstorm, this move does not check accuracy. If the weather is Desolate Land or Sunny Day, this move's accuracy is 50%. If this move is used against a Pokemon holding Utility Umbrella, this move's accuracy remains at 70%.",
 		shortDesc: "30% chance to paralyze. Can't miss in rain.",
 		gen7: {
-			desc: "Has a 30% chance to paralyze the target. This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop. If the weather is Primordial Sea or Rain Dance, this move does not check accuracy. If the weather is Desolate Land or Sunny Day, this move's accuracy is 50%.",
+			desc: "Has a 30% chance to paralyze the target. This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop. If the weather is Primordial Sea, Rain Dance or Thunderstorm, this move does not check accuracy. If the weather is Desolate Land or Sunny Day, this move's accuracy is 50%.",
 		},
 		gen5: {
 			desc: "Has a 30% chance to paralyze the target. This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop. If the weather is Rain Dance, this move does not check accuracy. If the weather is Sunny Day, this move's accuracy is 50%.",
@@ -7072,6 +7233,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Thunder Shock",
 		desc: "Has a 10% chance to paralyze the target.",
 		shortDesc: "10% chance to paralyze the target.",
+	},
+	thunderstorm: {
+		name: "Thunderstorm",
+		desc: "For 5 turns, the weather becomes Thunderstorm. At the end of every other turn except the last, all active Pokemon lose 1/32, 1/16, 1/8, 1/4, or 1/2 of their maximum HP, rounded down, based on their weakness to the Electric type; 0.25x, 0.5x, neutral, 2x, or 4x, respectively, unless they are a Electric or Ground type, or have the Magic Guard Ability. The damage of Electric-type attacks is multiplied by 1.5 during the effect. Fails if the current weather is Thunderstorm.",
+		shortDesc: "For 5 turns, thunderstorm powers Electric moves.",
 	},
 	thunderwave: {
 		name: "Thunder Wave",

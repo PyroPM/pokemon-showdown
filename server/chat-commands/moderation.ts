@@ -490,6 +490,7 @@ export const commands: Chat.ChatCommands = {
 		if (target.startsWith('http://')) target = target.slice(7);
 		if (target.startsWith('https://')) target = target.slice(8);
 		if (target.startsWith(`${Config.routes.client}/`)) target = target.slice(Config.routes.client.length + 1);
+		if (target.startsWith(`${Config.routes.uranium_client}/`)) target = target.slice(Config.routes.uranium_client.length + 1);
 		if (target.startsWith(`${Config.routes.replays}/`)) target = `battle-${target.slice(Config.routes.replays.length + 1)}`;
 		if (target.startsWith('psim.us/')) target = target.slice(8);
 		// isn't in tryJoinRoom so you can still join your own battles / gameRooms etc

@@ -100,11 +100,11 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	mnmls: "[Gen 9] Mix and Mega: Limited Supply Random Battle",
 	ccapm: "[Gen 9] CCAPM2025 Random Battle",
 	// ucc metas
-	omega: "[Gen 6] Omega (Ubers)",
-	gamma: "[Gen 6] Gamma (OU)",
-	beta: "[Gen 6] Beta (UU)",
-	alpha: "[Gen 6] Alpha (RU)",
-	ulc: "[Gen 6] Uranium Little Cup (LC)",
+	omega: "[Gen 6] Omega",
+	gamma: "[Gen 6] Gamma",
+	beta: "[Gen 6] Beta",
+	alpha: "[Gen 6] Alpha",
+	ulc: "[Gen 6] Uranium Little Cup",
 
 	// mega evos --- 1st ordered alphabetically by species, 2nd by alias
 	megasnow: "Abomasnow-Mega",
@@ -152,7 +152,6 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	megabro: "Slowbro-Mega",
 	tatsugirimega: "Tatsugiri-Curly-Mega",
 	megasaur: "Venusaur-Mega",
-	megawhim: "Whimsicott-Mega",
 	megazygardecomplete: "Zygarde-Mega",
 	zygardecompletemega: "Zygarde-Mega",
 
@@ -173,7 +172,7 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	transport: "Pokestar Transport",
 	pokestarufof: "Pokestar UFO",
 	pokestarufoflying: "Pokestar UFO",
-	// ufo: "Pokestar UFO",
+	ufo: "Pokestar UFO",
 	ufof: "Pokestar UFO",
 	ufoflying: "Pokestar UFO",
 	ufo2: "Pokestar UFO-2",
@@ -786,7 +785,6 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	vivillontundra: "Vivillon",
 
 	// abilities --- 1st ordered alphabetically by ability name, 2nd by alias
-	accel: "Acceleration",
 	adapt: "Adaptability",
 	asoneg: "As One (Glastrier)",
 	asones: "As One (Spectrier)",
@@ -2590,16 +2588,6 @@ export const Aliases: import('../sim/dex').AliasesTable = {
 	venomiconp: "Venomicon",
 	venomiconprologue: "Venomicon",
 	volk: "Volkraken",
-
-	cubbl: "Cubblfly",
-	ufo: "S51-A",
-
-	march: "Archilles-Mega",
-	marchilles: "Archilles-Mega",
-	melectruxo: "Electruxo-Mega",
-	mlynx: "Metalynx-Mega",
-	mmeta: "Metalynx-Mega",
-	minfla: "Inflagetah-Mega",
 };
 
 /** This is what lets you type "tb"/"tbolt"/"bolt" to find "thunderbolt" in the

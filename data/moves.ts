@@ -2171,6 +2171,8 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				newType = 'Fairy';
 			} else if (this.field.isTerrain('psychicterrain')) {
 				newType = 'Psychic';
+			} else if (this.field.isTerrain('stickyterrain')) {
+				newType = 'Poison';
 			}
 
 			if (target.getTypes().join() === newType || !target.setType(newType)) return false;
@@ -3609,7 +3611,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		condition: {
 			duration: 2,
 			onImmunity(type, pokemon) {
-				if (type === 'sandstorm' || type === 'hail') return false;
+				if (type === 'sandstorm' || type === 'hail' || type === 'thunderstorm' || type === 'fallout' || type === 'chernobyl') return false;
 			},
 			onInvulnerability(target, source, move) {
 				if (['earthquake', 'magnitude'].includes(move.id)) {
@@ -3775,7 +3777,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		condition: {
 			duration: 2,
 			onImmunity(type, pokemon) {
-				if (type === 'sandstorm' || type === 'hail') return false;
+				if (type === 'sandstorm' || type === 'hail' || type === 'thunderstorm' || type === 'fallout' || type === 'chernobyl') return false;
 			},
 			onInvulnerability(target, source, move) {
 				if (['surf', 'whirlpool'].includes(move.id)) {
@@ -8705,6 +8707,21 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		type: "Electric",
 		contestType: "Clever",
 	},
+	hiddenpowerfairy: {
+		num: 237,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		placeholderFor: "Hidden Power",
+		isNonstandard: "Past",
+		name: "Hidden Power Fairy",
+		pp: 15,
+		priority: 0,
+		flags: { protect: 1, mirror: 1 },
+		target: "normal",
+		type: "Fairy",
+		contestType: "Clever",
+	},
 	hiddenpowerfighting: {
 		num: 237,
 		accuracy: 100,
@@ -12263,6 +12280,9 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			case 'sandstorm':
 			case 'hail':
 			case 'snowscape':
+			case 'thunderstorm':
+			case 'fallout':
+			case 'chernobyl':
 				factor = 0.25;
 				break;
 			}
@@ -12299,6 +12319,9 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			case 'sandstorm':
 			case 'hail':
 			case 'snowscape':
+			case 'thunderstorm':
+			case 'fallout':
+			case 'chernobyl':
 				factor = 0.25;
 				break;
 			}
@@ -12618,6 +12641,8 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				move = 'moonblast';
 			} else if (this.field.isTerrain('psychicterrain')) {
 				move = 'psychic';
+			} else if (this.field.isTerrain('stickyterrain')) {
+				move = 'sludgebomb';
 			}
 			this.actions.useMove(move, pokemon, { target });
 			return null;
@@ -15927,6 +15952,11 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 						spe: -1,
 					},
 				});
+			} else if (this.field.isTerrain('stickyterrain')) {
+				move.secondaries.push({
+					chance: 30,
+					status: 'psn',
+				});
 			}
 		},
 		secondary: {
@@ -17241,7 +17271,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			return null;
 		},
 		onBasePower(basePower, pokemon, target) {
-			const weakWeathers = ['raindance', 'primordialsea', 'sandstorm', 'hail', 'snowscape'];
+			const weakWeathers = ['raindance', 'primordialsea', 'sandstorm', 'hail', 'snowscape', 'thunderstorm', 'fallout', 'chernobyl'];
 			if (weakWeathers.includes(pokemon.effectiveWeather())) {
 				this.debug('weakened by weather');
 				return this.chainModify(0.5);
@@ -17277,7 +17307,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			return null;
 		},
 		onBasePower(basePower, pokemon, target) {
-			const weakWeathers = ['raindance', 'primordialsea', 'sandstorm', 'hail', 'snowscape'];
+			const weakWeathers = ['raindance', 'primordialsea', 'sandstorm', 'hail', 'snowscape', 'thunderstorm', 'fallout', 'chernobyl'];
 			if (weakWeathers.includes(pokemon.effectiveWeather())) {
 				this.debug('weakened by weather');
 				return this.chainModify(0.5);
@@ -18737,6 +18767,9 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			case 'sandstorm':
 			case 'hail':
 			case 'snowscape':
+			case 'thunderstorm':
+			case 'fallout':
+			case 'chernobyl':
 				factor = 0.25;
 				break;
 			}
@@ -19279,6 +19312,9 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				break;
 			case 'psychicterrain':
 				move.type = 'Psychic';
+				break;
+			case 'stickyterrain':
+				move.type = 'Poison';
 				break;
 			}
 		},
@@ -20709,6 +20745,13 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			case 'snowscape':
 				move.type = 'Ice';
 				break;
+			case 'thunderstorm':
+				move.type = 'Electric';
+				break;
+			case 'fallout':
+			case 'chernobyl':
+				move.type = 'Nuclear';
+				break;
 			}
 		},
 		onModifyMove(move, pokemon) {
@@ -20726,6 +20769,13 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				break;
 			case 'hail':
 			case 'snowscape':
+				move.basePower *= 2;
+				break;
+			case 'thunderstorm':
+				move.basePower *= 2;
+				break;
+			case 'fallout':
+			case 'chernobyl':
 				move.basePower *= 2;
 				break;
 			}
@@ -21293,5 +21343,535 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "allAdjacentFoes",
 		type: "Fire",
 		contestType: "Beautiful",
+	},
+	coralbreak: {
+		num: -1,
+		accuracy: 95,
+		basePower: 80,
+		category: "Special",
+		overrideDefensiveStat: 'def',
+		name: "Coral Break",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		target: "normal",
+		type: "Water",
+		contestType: "Cool",
+	},
+	atomicpunch: {
+		num: -2,
+		accuracy: 95,
+		basePower: 80,
+		category: "Physical",
+		name: "Atomic Punch",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 15,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Nuclear",
+		contestType: "Cool",
+	},
+	metalwhip: {
+		num: -3,
+		accuracy: 90,
+		basePower: 50,
+		category: "Physical",
+		name: "Metal Whip",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
+		target: "normal",
+		type: "Steel",
+		contestType: "Cool",
+	},
+	nuclearwaste: {
+		num: -4,
+		accuracy: 85,
+		basePower: 0,
+		category: "Status",
+		name: "Nuclear Waste",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		status: 'tox',
+		target: "normal",
+		type: "Nuclear",
+		contestType: "Cool",
+	},
+	gammaray: {
+		num: -5,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Gamma Ray",
+		pp: 30,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		target: "normal",
+		type: "Nuclear",
+		contestType: "Cool",
+	},
+	radioacid: {
+		num: -6,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		name: "Radioacid",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Nuclear",
+		contestType: "Cool",
+	},
+	skyfall: {
+		num: -7,
+		accuracy: 100,
+		basePower: 85,
+		category: "Special",
+		name: "Sky Fall",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'par',
+		},
+		target: "normal",
+		type: "Flying",
+		contestType: "Cool",
+	},
+	flameimpact: {
+		num: -8,
+		accuracy: 100,
+		basePower: 65,
+		category: "Physical",
+		name: "Flame Impact",
+		pp: 15,
+		priority: 2,
+		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
+		target: "normal",
+		type: "Fire",
+		contestType: "Cool",
+	},
+	subduction: {
+		num: -9,
+		accuracy: 90,
+		basePower: 140,
+		category: "Physical",
+		name: "Subduction",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -2,
+			},
+		},
+		onHit(target, source) {
+			source.addVolatile('confusion');
+		},
+		target: "allAdjacent",
+		type: "Ground",
+		contestType: "Cool",
+	},
+	instantcrush: {
+		num: -10,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		name: "Instant Crush",
+		pp: 15,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		target: "normal",
+		type: "Psychic",
+		contestType: "Cool",
+	},
+	getlucky: {
+		num: -11,
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Get Lucky",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'focusenergy',
+		},
+		target: "normal",
+		type: "Psychic",
+		contestType: "Cool",
+	},
+	laserpulse: {
+		num: -12,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Laser Pulse",
+		pp: 20,
+		flags: {protect: 1, pulse: 1, mirror: 1},
+		onModifyMove(move) {
+			const laserPulseTypes = ["Fire", "Electric", "Ice"]; // stupid mechanic btw
+			move.type = this.sample(laserPulseTypes);
+		},
+		priority: 0,
+		target: "normal",
+		type: "Normal",
+		contestType: "Cool",
+	},
+	halflife: {
+		num: -13,
+		accuracy: 90,
+		basePower: 0,
+		damageCallback(pokemon, target) {
+			return this.clampIntRange(target.getUndynamaxedHP() / 2, 1);
+		},
+		category: "Special",
+		name: "Half-life",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1},
+		target: "normal",
+		type: "Nuclear",
+		contestType: "Cool",
+	},
+	fissionburst: {
+		num: -14,
+		accuracy: 100,
+		basePower: 150,
+		category: "Physical",
+		name: "Fission Burst",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		selfdestruct: "always",
+		target: "allAdjacent",
+		type: "Nuclear",
+		contestType: "Cool",
+	},
+	causticbreath: {
+		num: -15,
+		accuracy: 100,
+		basePower: 60,
+		category: "Special",
+		name: "Caustic Breath",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				def: -1,
+				spd: -1,
+			},
+		},
+		target: "allAdjacentFoes",
+		type: "Dragon",
+		contestType: "Cool",
+	},
+	nuclearslash: {
+		num: -16,
+		accuracy: 90,
+		basePower: 55,
+		category: "Physical",
+		name: "Nuclear Slash",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		critRatio: 2,
+		target: "normal",
+		type: "Nuclear",
+		contestType: "Cool",
+	},
+	thunderstorm: {
+		num: -17,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Thunderstorm",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		weather: 'Thunderstorm',
+		target: "all",
+		type: "Electric",
+		contestType: "Cool",
+	},
+	suddenstrike: {
+		num: -18,
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Sudden Strike",
+		pp: 30,
+		priority: 1,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		target: "normal",
+		type: "Dark",
+		contestType: "Cool",
+	},
+	expunge: {
+		num: -19,
+		accuracy: 70,
+		basePower: 110,
+		category: "Special",
+		name: "Expunge",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Nuclear') return 1;
+		},
+		onModifyMove(move) {
+			if (this.field.isWeather('fallout') || this.field.isWeather('chernobyl')) move.accuracy = true;
+		},
+		target: "normal",
+		type: "Nuclear",
+		contestType: "Cool",
+	},
+	fallout: {
+		num: -20,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Fallout",
+		pp: 10,
+		priority: 0,
+		flags: {},
+		weather: 'fallout',
+		target: "all",
+		type: "Nuclear",
+		contestType: "Cool",
+	},
+	protonbeam: {
+		num: -21,
+		accuracy: 90,
+		basePower: 100,
+		category: "Special",
+		name: "Proton Beam",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				spa: -2,
+			},
+		},
+		target: "normal",
+		type: "Nuclear",
+		contestType: "Cool",
+	},
+	infernalblade: {
+		num: -22,
+		accuracy: 95,
+		basePower: 90,
+		category: "Physical",
+		name: "Infernal Blade",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, defrost: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Fairy') return 2;
+		},
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Fire",
+		contestType: "Cool",
+	},
+	quantumleap: {
+		num: -23,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Quantum Leap",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, charge: 1, mirror: 1},
+		breaksProtect: true, // code copypasted from phantom force and this part is probably still accurate
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
+		condition: {
+			duration: 2,
+			onInvulnerability: false,
+		},
+		target: "normal",
+		type: "Nuclear",
+		contestType: "Cool",
+	},
+	metalcruncher: {
+		num: -24,
+		accuracy: 85,
+		basePower: 120,
+		category: "Physical",
+		name: "Metal Cruncher",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 70,
+			boosts: {
+				def: -1,
+			},
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Cool",
+	},
+	drainlife: {
+		num: -25,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Drain Life",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, heal: 1},
+		drain: [1, 2],
+		target: "normal",
+		type: "Dark",
+		contestType: "Cool",
+	},
+	stickyterrain: {
+		num: -26,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Sticky Terrain",
+		pp: 10,
+		priority: 0,
+		flags: {nonsky: 1},
+		terrain: 'stickyterrain',
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasItem('terrainextender')) {
+					return 8;
+				}
+				return 5;
+			},
+			onTryHitPriority: 4,
+			onTryHit(target, source, effect) {
+				if (effect && (effect.priority <= 0.1 || effect.target === 'self')) {
+					return;
+				}
+				if (target.isSemiInvulnerable() || target.isAlly(source)) return;
+				if (!source.isGrounded()) {
+					const baseMove = this.dex.moves.get(effect.id);
+					if (baseMove.priority > 0) {
+						this.hint("Sticky Terrain doesn't affect attackers immune to Ground.");
+					}
+					return;
+				}
+				if (!target.isGrounded()) {
+					const baseMove = this.dex.moves.get(effect.id);
+					if (baseMove.priority > 0) {
+						this.hint("Unlike Psychic Terrain, Sticky Terrain protects non-grounded targets.");
+					}
+				}
+				this.add('-activate', target, 'move: Sticky Terrain');
+				return null;
+			},
+			onFieldStart(field, source, effect) {
+				this.add('-fieldstart', 'move: Sticky Terrain');
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Sticky Terrain');
+			},
+		},
+		target: "all",
+		type: "Poison",
+		contestType: "Cool",
+	},
+	nuclearwind: {
+		num: -27,
+		accuracy: 95,
+		basePower: 65,
+		category: "Special",
+		name: "Nuclear Wind",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 5,
+			weather: 'fallout', // why does this exist in the game
+		},
+		target: "normal",
+		type: "Nuclear",
+		contestType: "Cool",
+	},
+	gemstoneglimmer: {
+		num: -28,
+		accuracy: 95,
+		basePower: 75,
+		category: "Special",
+		name: "Gemstone Glimmer",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 25,
+			boosts: {
+				accuracy: -1,
+			},
+		},
+		target: "normal",
+		type: "Rock",
+		contestType: "Cool",
+	},
+	oceanswrath: {
+		num: -29,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Ocean's Wrath",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		volatileStatus: 'partiallytrapped',
+		target: "normal",
+		type: "Water",
+		contestType: "Cool",
+	},
+	goldenfist: {
+		num: -30,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Golden Fist",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onHit() {
+			this.add('-fieldactivate', 'move: Pay Day');
+		},
+		target: "normal",
+		type: "Fighting",
+		contestType: "Cool",
 	},
 };

@@ -1468,6 +1468,9 @@ export class Pokemon {
 						this.battle.add('-primal', this, species.requiredItem);
 					}
 				} else {
+					if (this.illusion) {
+						this.battle.singleEvent('End', this.battle.dex.abilities.get('Illusion'), this.abilityState, this); // for mega dramsama
+					}
 					this.battle.add('-mega', this, apparentSpecies, species.requiredItem);
 					this.moveThisTurnResult = true; // Mega Evolution counts as an action for Truant
 				}

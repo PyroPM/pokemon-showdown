@@ -114,6 +114,15 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "As One (Spectrier)",
 		shortDesc: "Combination of the Unnerve and Grim Neigh Abilities.",
 	},
+	atomizate: {
+		name: "Atomizate",
+		desc: "This Pokemon's Normal-type moves become Nuclear-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+		shortDesc: "This Pokemon's Normal-type moves become Nuclear type and have 1.2x power.",
+		gen6: {
+			desc: "This Pokemon's Normal-type moves become Nuclear-type moves and have their power multiplied by 1.3. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+			shortDesc: "This Pokemon's Normal-type moves become Nuclear type and have 1.3x power.",
+		},
+	},
 	aurabreak: {
 		name: "Aura Break",
 		desc: "While this Pokemon is active, the effects of the Dark Aura and Fairy Aura Abilities are reversed, multiplying the power of Dark- and Fairy-type moves, respectively, by 3/4 instead of 1.33.",
@@ -188,6 +197,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "At 1/3 or less of its max HP, this Pokemon's Fire-type attacks have 1.5x power.",
 		},
 	},
+	bloodlust: {
+		name: "Blood Lust",
+		desc: "After an attack, this Pokemon gains 1/8 of the damage in HP dealt to other Pokemon.",
+		shortDesc: "After an attack, this Pokemon gains 1/8 of the damage dealt to other Pokemon.",
+	},
 	bulletproof: {
 		name: "Bulletproof",
 		shortDesc: "This Pokemon is immune to bullet moves.",
@@ -199,6 +213,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		gen7: {
 			desc: "If this Pokemon eats a held Berry, it restores 1/3 of its maximum HP, rounded down, in addition to the Berry's effect. This effect can also activate after the effects of Bug Bite, Fling, and Pluck if the eaten Berry has an effect on this Pokemon.",
 		},
+	},
+	chernobyl: {
+		name: "Chernobyl",
+		shortDesc: "On switch-in, this Pokemon summons Toxic Fallout.",
 	},
 	chillingneigh: {
 		name: "Chilling Neigh",
@@ -347,6 +365,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		block: "#damp",
 	},
+	deepfreeze: {
+		name: "Deep Freeze",
+		shortDesc: "30% chance a Pokemon making contact with this Pokemon will be frozen.",
+	},
 	defeatist: {
 		name: "Defeatist",
 		desc: "While this Pokemon has 1/2 or less of its maximum HP, its Attack and Special Attack are halved.",
@@ -366,6 +388,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Desolate Land",
 		desc: "On switch-in, the weather becomes Desolate Land, which includes all the effects of Sunny Day and prevents damaging Water-type moves from executing. This weather remains in effect until this Ability is no longer active for any Pokemon, or the weather is changed by the Delta Stream or Primordial Sea Abilities.",
 		shortDesc: "On switch-in, extremely harsh sunlight begins until this Ability is not active in battle.",
+	},
+	disenchant: {
+		name: "Disenchant",
+		shortDesc: "This Pokemon is immune to damaging Fairy-type moves.",
 	},
 	disguise: {
 		name: "Disguise",
@@ -447,6 +473,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		start: "  Being hit by [MOVE] charged [POKEMON] with power!",
 	},
+	elementalist: {
+		name: "Elementalist",
+		shortDesc: "Has 1.5x attacking stats while using a Fire, Water, or Electric-type attack.",
+	},
 	embodyaspectcornerstone: {
 		name: "Embody Aspect (Cornerstone)",
 		shortDesc: "On switch-in, this Pokemon's Defense is raised by 1 stage.",
@@ -475,6 +505,15 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Emergency Exit",
 		desc: "When this Pokemon has more than 1/2 its maximum HP and takes damage bringing it to 1/2 or less of its maximum HP, it immediately switches out to a chosen ally. This effect applies after all hits from a multi-hit move. This effect is prevented if the move had a secondary effect removed by the Sheer Force Ability. This effect applies to both direct and indirect damage, except Curse and Substitute on use, Belly Drum, Pain Split, and confusion damage.",
 		shortDesc: "This Pokemon switches out when it reaches 1/2 or less of its maximum HP.",
+	},
+	energizate: {
+		name: "Energizate",
+		desc: "This Pokemon's Normal-type moves become Electric-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+		shortDesc: "This Pokemon's Normal-type moves become Electric type and have 1.2x power.",
+		gen6: {
+			desc: "This Pokemon's Normal-type moves become Electric-type moves and have their power multiplied by 1.3. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
+			shortDesc: "This Pokemon's Normal-type moves become Electric type and have 1.3x power.",
+		},
 	},
 	fairyaura: {
 		name: "Fairy Aura",
@@ -596,6 +635,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Galvanize",
 		desc: "This Pokemon's Normal-type moves become Electric-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
 		shortDesc: "This Pokemon's Normal-type moves become Electric type and have 1.2x power.",
+	},
+	geigersense: {
+		name: "Geiger Sense",
+		desc: "On switch-in, this Pokemon's Attack and Special Attack are raised by 1 stage if another Nuclear-type Pokemon is on the field.",
+		shortDesc: "On switch-in, raises Attack and Sp. Atk if another Nuclear-type is on field.",
 	},
 	gluttony: {
 		name: "Gluttony",
@@ -780,6 +824,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "This Pokemon's moves ignore the foe's Reflect, Light Screen, Safeguard, and Mist.",
 		},
 	},
+	infuriate: {
+		name: "Infuriate",
+		shortDesc: "This Pokemon's Attack is raised by 1 stage after it is damaged by a physical move.",
+	},
 	innardsout: {
 		name: "Innards Out",
 		desc: "If this Pokemon is knocked out with a move, that move's user loses HP equal to the amount of damage inflicted on this Pokemon.",
@@ -855,6 +903,15 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Klutz",
 		desc: "This Pokemon's held item has no effect. This Pokemon cannot use Fling successfully. Macho Brace, Power Anklet, Power Band, Power Belt, Power Bracer, Power Lens, and Power Weight still have their effects.",
 		shortDesc: "This Pokemon's held item has no effect, except Macho Brace. Fling cannot be used.",
+	},
+	lazy: {
+		name: "Lazy",
+		shortDesc: "On switch-in, this Pokemon falls asleep for 2 turns.",
+	},
+	leadskin: {
+		name: "Lead Skin",
+		desc: "This Pokemon is immune to damaging Nuclear-type moves and Toxic Fallout.",
+		shortDesc: "This Pokemon is immune to damaging Nuclear-type moves.",
 	},
 	leafguard: {
 		name: "Leaf Guard",
@@ -1251,6 +1308,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		start: "  Both Pok\u00E9mon will faint in three turns!",
 	},
+	petrify: {
+		name: "Petrify",
+		desc: "On switch-in, this Pokemon lowers the Speed of adjacent opposing Pokemon by 1 stage. Pokemon behind a substitute are immune.",
+		shortDesc: "On switch-in, this Pokemon lowers the Speed of adjacent opponents by 1 stage.",
+	},
 	pickpocket: {
 		name: "Pickpocket",
 		desc: "If this Pokemon has no item and is hit by a contact move, it steals the attacker's item. This effect applies after all hits from a multi-hit move. This effect is prevented if the move had a secondary effect removed by the Sheer Force Ability.",
@@ -1441,6 +1503,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 
 		block: "#damp",
 	},
+	quickcharge: {
+		name: "Quick Charge",
+		shortDesc: "On this Pokemon's first turn, its moves have their priority increased by 4.",
+	},
 	quickdraw: {
 		name: "Quick Draw",
 		shortDesc: "This Pokemon has a 30% chance to move first in its priority bracket with attacking moves.",
@@ -1471,6 +1537,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			desc: "This Pokemon's Speed is raised by 1 stage if hit by a Bug-, Dark-, or Ghost-type attack.",
 			shortDesc: "This Pokemon's Speed is raised 1 stage if hit by a Bug-, Dark-, or Ghost-type attack.",
 		},
+	},
+	rebuild: {
+		name: "Rebuild",
+		desc: "It it wasn't hit by a damaging move, this Pokemon restores 1/8 of its maximum HP, rounded down, at the end of each turn.",
+		shortDesc: "If unhit, this Pokemon heals 1/8 of its max HP each turn.",
 	},
 	receiver: {
 		name: "Receiver",
@@ -1636,6 +1707,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 			shortDesc: "Prevents opposing Pokemon from choosing to switch out.",
 		},
 	},
+	sharpcoral: {
+		name: "Sharp Coral",
+		desc: "The power of this Pokemon's moves are doubled. This pokemon takes double damage from attacks.",
+		shortDesc: "Moves used do double damage; receives double damage from moves.",
+	},
 	sharpness: {
 		name: "Sharpness",
 		shortDesc: "This Pokemon's slicing moves have their power multiplied by 1.5.",
@@ -1772,6 +1848,11 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		name: "Soul-Heart",
 		shortDesc: "This Pokemon's Special Attack is raised by 1 stage when another Pokemon faints.",
 	},
+	soundboost: {
+		name: "Sound Boost",
+		desc: "This Pokemon's sound-based moves have their power multiplied by 1.3.",
+		shortDesc: "This Pokemon's sound moves have 1.3x power.",
+	},
 	soundproof: {
 		name: "Soundproof",
 		shortDesc: "This Pokemon is immune to sound-based moves, unless it used the move.",
@@ -1868,6 +1949,10 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		},
 
 		block: "  [POKEMON]'s item cannot be removed!",
+	},
+	stormbringer: {
+		name: "Stormbringer",
+		shortDesc: "On switch-in, this Pokemon summons Thunderstorm.",
 	},
 	stormdrain: {
 		name: "Storm Drain",
